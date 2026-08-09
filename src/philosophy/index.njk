@@ -1,0 +1,162 @@
+---
+layout: layouts/base.njk
+pageId: philosophy
+title: 教育について
+description: APUPUが大切にしている教育観と、子どもとの向き合い方をご紹介します。
+---
+<section class="page-hero">
+  <div class="page-hero__deco"></div>
+  <div class="container page-hero__inner">
+    <div class="breadcrumbs"><a href="{{ '/' | url }}">HOME</a><span>／</span>教育について</div>
+    <div class="eyebrow">Philosophy ／ 教育について</div>
+    <h1 class="page-hero__title">
+      計算力の、<br>その先へ。
+    </h1>
+    <p class="page-hero__lead">
+      私たちが育てたいのは、計算が速い子どもではありません。数字を楽しみ、自分で考え、挑戦し続けられる子どもです。技術の先にある「これからを生きる力」に、教育の焦点を合わせています。
+    </p>
+  </div>
+</section>
+
+<!-- 好循環サイクル -->
+<section class="section container">
+  <div class="sec-head sec-head--center">
+    <div class="eyebrow">The Cycle</div>
+    <h2 class="h-headline">自信・挑戦・成長の、<br>好循環をつくる。</h2>
+    <p class="h-lead">
+      できることが増える。だから、もっと好きになる。好きになるから、挑戦できる。挑戦するから、また新しい「できる」が生まれる。私たちは、この循環を丁寧に設計します。
+    </p>
+  </div>
+  <div class="cycle-diagram">
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+      <!-- circular flow -->
+      <circle cx="200" cy="200" r="140" fill="none" stroke="currentColor" stroke-width="1" opacity="0.15" stroke-dasharray="2 4"/>
+
+      <!-- arrows around -->
+      <g fill="none" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round">
+        <path d="M 200 60 A 140 140 0 0 1 335 235" opacity="0.5"/>
+        <path d="M 335 235 A 140 140 0 0 1 200 340" opacity="0.5"/>
+        <path d="M 200 340 A 140 140 0 0 1 65 235" opacity="0.5"/>
+        <path d="M 65 235 A 140 140 0 0 1 200 60" opacity="0.5"/>
+      </g>
+
+      <!-- Nodes: 4 points on circle -->
+      <g>
+        <circle cx="200" cy="60" r="60" fill="var(--warm)" stroke="var(--ink)" stroke-width="1.5"/>
+        <text x="200" y="55" text-anchor="middle" font-family="Noto Serif JP, serif" font-size="16" font-weight="500" fill="currentColor">自信</text>
+        <text x="200" y="75" text-anchor="middle" font-family="EB Garamond, serif" font-style="italic" font-size="11" fill="var(--ink-mute)">Confidence</text>
+      </g>
+      <g>
+        <circle cx="335" cy="235" r="60" fill="var(--warm)" stroke="var(--ink)" stroke-width="1.5"/>
+        <text x="335" y="230" text-anchor="middle" font-family="Noto Serif JP, serif" font-size="16" font-weight="500" fill="currentColor">挑戦</text>
+        <text x="335" y="250" text-anchor="middle" font-family="EB Garamond, serif" font-style="italic" font-size="11" fill="var(--ink-mute)">Challenge</text>
+      </g>
+      <g>
+        <circle cx="200" cy="340" r="60" fill="var(--warm)" stroke="var(--ink)" stroke-width="1.5"/>
+        <text x="200" y="335" text-anchor="middle" font-family="Noto Serif JP, serif" font-size="16" font-weight="500" fill="currentColor">できる</text>
+        <text x="200" y="355" text-anchor="middle" font-family="EB Garamond, serif" font-style="italic" font-size="11" fill="var(--ink-mute)">Achievement</text>
+      </g>
+      <g>
+        <circle cx="65" cy="235" r="60" fill="var(--warm)" stroke="var(--ink)" stroke-width="1.5"/>
+        <text x="65" y="230" text-anchor="middle" font-family="Noto Serif JP, serif" font-size="16" font-weight="500" fill="currentColor">好き</text>
+        <text x="65" y="250" text-anchor="middle" font-family="EB Garamond, serif" font-style="italic" font-size="11" fill="var(--ink-mute)">Love</text>
+      </g>
+
+      <!-- Center label -->
+      <text x="200" y="195" text-anchor="middle" font-family="EB Garamond, serif" font-style="italic" font-size="12" fill="var(--ink-sub)" letter-spacing="0.15em">Growing</text>
+      <text x="200" y="215" text-anchor="middle" font-family="Noto Serif JP, serif" font-size="14" font-weight="500" fill="var(--ink)">この循環を、育てる</text>
+    </svg>
+  </div>
+  <div style="text-align: center; margin-top: 40px; font-family: var(--font-serif); font-size: 17px; color: var(--ink-sub); line-height: 2;">
+    自信があるから、挑戦できる。<br>
+    挑戦するから、できることが増える。<br>
+    できることが増えるから、もっと好きになる。
+  </div>
+</section>
+
+<!-- 7つの問い -->
+<section class="section section--sub">
+  <div class="container">
+    <div class="sec-head">
+      <div class="eyebrow">Our Beliefs</div>
+      <h2 class="h-headline">私たちが、<br>大切にしている「なぜ」。</h2>
+      <p class="h-lead">
+        なぜ数字なのか。なぜそろばんなのか。なぜ幼児期なのか。私たちの教育観は、こうした一つひとつの「なぜ」への向き合い方の中に、静かに宿っています。
+      </p>
+    </div>
+    <div class="philosophy-qa">
+      <div class="philosophy-qa__item">
+        <p class="philosophy-qa__q">なぜ、数字なのか。</p>
+        <p class="philosophy-qa__a">
+          数字は、国や言語を越えて使える共通言語です。数字と仲良くなることは、世界中の情報を読み解く力を育てること。AI時代においても、そこに向き合う姿勢は変わりません。
+        </p>
+      </div>
+      <div class="philosophy-qa__item">
+        <p class="philosophy-qa__q">なぜ、そろばんなのか。</p>
+        <p class="philosophy-qa__a">
+          そろばんは、数を「見て、触って、動かす」道具です。抽象的な数字を身体感覚で掴めるからこそ、頭の中に数の実体が育ちます。私たちにとって、そろばんは思考の入口です。
+        </p>
+      </div>
+      <div class="philosophy-qa__item">
+        <p class="philosophy-qa__q">なぜ、幼児・小学校低学年なのか。</p>
+        <p class="philosophy-qa__a">
+          この時期の子どもは、数字への印象がまだ固まっていません。「面白い」で出会えるか、「難しい」で出会うか。最初の印象が、その後の学び全体の姿勢を決めていきます。
+        </p>
+      </div>
+      <div class="philosophy-qa__item">
+        <p class="philosophy-qa__q">なぜ、毎日の継続なのか。</p>
+        <p class="philosophy-qa__a">
+          週に1度の1時間より、毎日の10分。学びは、頻度と間隔の設計で育つものです。だから私たちは、続けやすい仕組みを大人の側で用意することを、指導と同じくらい大切にしています。
+        </p>
+      </div>
+      <div class="philosophy-qa__item">
+        <p class="philosophy-qa__q">なぜ、失敗を大切にするのか。</p>
+        <p class="philosophy-qa__a">
+          間違えないことより、間違えても続けられること。ミスを「発見」として扱う空気の中で、子どもは挑戦への抵抗を失っていきます。失敗のあとの一歩を、私たちは丁寧に迎えます。
+        </p>
+      </div>
+      <div class="philosophy-qa__item">
+        <p class="philosophy-qa__q">なぜ、保護者が答えを教えすぎない方がよいのか。</p>
+        <p class="philosophy-qa__a">
+          答えを教える人が近くにいると、子どもは考える前に聞くことを覚えます。保護者は「家庭教師」になる必要はありません。「考えている姿を見守る人」でいてください。それが最大の応援です。
+        </p>
+      </div>
+      <div class="philosophy-qa__item">
+        <p class="philosophy-qa__q">なぜ、褒めることが自信になるのか。</p>
+        <p class="philosophy-qa__a">
+          「できた」を子ども一人の胸にしまうより、大人が言葉にして返す方が、記憶に残ります。ただし過剰な褒めは逆効果。私たちは「見ている」を伝える褒め方を、指導者と保護者の両方に共有しています。
+        </p>
+      </div>
+      <div class="philosophy-qa__item">
+        <p class="philosophy-qa__q">なぜ、教えるより待つのか。</p>
+        <p class="philosophy-qa__a">
+          「わかった！」の瞬間は、教えられて起こるのではなく、自分で辿り着いて生まれるものです。子どもが自分の力で扉を開ける「間」を、大人が奪わないこと。教えないことも、指導です。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 中心思想の再確認 -->
+<section class="section container">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <div class="eyebrow" style="justify-content: center; display: inline-flex;">Central Belief</div>
+    <p style="font-family: var(--font-serif); font-size: clamp(20px, 2.4vw, 28px); line-height: 2.1; color: var(--ink); letter-spacing: 0.06em; margin: 0 0 32px;">
+      子どもは、<br>教えられて育つのではありません。
+    </p>
+    <p style="font-family: var(--font-serif); font-size: clamp(24px, 3vw, 36px); line-height: 1.9; color: var(--ink); letter-spacing: 0.08em; margin: 0; font-weight: 500;">
+      <span style="background: linear-gradient(transparent 62%, var(--accent) 62%, var(--accent) 82%, transparent 82%);">信じられて</span>育ちます。
+    </p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h2 class="final-cta__title">教育観を、方法論へ。</h2>
+    <p class="final-cta__sub">私たちの教育観が、どのようにサービスに落とし込まれているのか。<br>APUPU METHODで、詳しくお伝えします。</p>
+    <div class="final-cta__ctas">
+      <a href="{{ '/method/' | url }}" class="btn btn--accent">APUPU METHOD <span class="btn__arrow"></span></a>
+      <a href="{{ '/services/' | url }}" class="btn btn--ghost">事業・サービス <span class="btn__arrow"></span></a>
+    </div>
+  </div>
+</section>

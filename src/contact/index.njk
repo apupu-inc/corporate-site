@@ -1,0 +1,171 @@
+---
+layout: layouts/base.njk
+pageId: contact
+title: お問い合わせ
+description: サービス、採用、提携、取材などに関するお問い合わせ窓口です。
+---
+<section class="page-hero">
+  <div class="page-hero__deco"></div>
+  <div class="container page-hero__inner">
+    <div class="breadcrumbs"><a href="{{ '/' | url }}">HOME</a><span>／</span>お問い合わせ</div>
+    <div class="eyebrow">Contact ／ お問い合わせ</div>
+    <h1 class="page-hero__title">
+      対話は、<br>ここから始まります。
+    </h1>
+    <p class="page-hero__lead">
+      サービスに関するご相談、体験・入会のご案内、採用・提携・取材のご依頼まで。目的をお選びいただき、お気軽にご連絡ください。担当より順にご返信いたします。
+    </p>
+  </div>
+</section>
+
+<section class="section container">
+  <div class="eyebrow">Select ／ お問い合わせ種別</div>
+  <div class="contact-types">
+
+      <button type="button" class="contact-type is-active" data-contact-type="サービスについて">
+        <div class="contact-type__tag">Service</div>
+        <h4>サービスについて</h4>
+        <p>サービス内容・機能・使い方など</p>
+      </button>
+
+      <button type="button" class="contact-type " data-contact-type="体験・入会について">
+        <div class="contact-type__tag">Trial</div>
+        <h4>体験・入会について</h4>
+        <p>体験レッスン・入会手続き・料金プラン</p>
+      </button>
+
+      <button type="button" class="contact-type " data-contact-type="採用について">
+        <div class="contact-type__tag">Careers</div>
+        <h4>採用について</h4>
+        <p>職種相談・カジュアル面談・応募</p>
+      </button>
+
+      <button type="button" class="contact-type " data-contact-type="提携について">
+        <div class="contact-type__tag">Partnership</div>
+        <h4>提携について</h4>
+        <p>事業提携・共同企画・パートナー相談</p>
+      </button>
+
+      <button type="button" class="contact-type " data-contact-type="取材について">
+        <div class="contact-type__tag">Media</div>
+        <h4>取材について</h4>
+        <p>取材・登壇・寄稿・広報のご依頼</p>
+      </button>
+
+      <button type="button" class="contact-type " data-contact-type="その他">
+        <div class="contact-type__tag">Other</div>
+        <h4>その他</h4>
+        <p>上記以外のお問い合わせ全般</p>
+      </button>
+
+  </div>
+</section>
+
+<section class="contact-form">
+  <form action="#" method="post">
+    <p class="contact-form__notice">現在、フォームの送信先は未設定です。公開前に外部フォームサービス等の送信先を設定してください。</p>
+    <div class="contact-form__row">
+      <div class="contact-form__label">
+        <span>お名前</span>
+        <span class="req">必須</span>
+      </div>
+      <input type="text" name="name" autocomplete="name" placeholder="山田 太郎" required>
+    </div>
+
+    <div class="contact-form__row">
+      <div class="contact-form__label">
+        <span>会社名／団体名</span>
+        <span class="opt">任意</span>
+      </div>
+      <input type="text" name="organization" autocomplete="organization" placeholder="株式会社〇〇">
+    </div>
+
+    <div class="contact-form__row">
+      <div class="contact-form__label">
+        <span>メールアドレス</span>
+        <span class="req">必須</span>
+      </div>
+      <input type="email" name="email" autocomplete="email" placeholder="example@apupu.example" required>
+    </div>
+
+    <div class="contact-form__row">
+      <div class="contact-form__label">
+        <span>電話番号</span>
+        <span class="opt">任意</span>
+      </div>
+      <input type="tel" name="tel" autocomplete="tel" placeholder="090-0000-0000">
+    </div>
+
+    <div class="contact-form__row">
+      <div class="contact-form__label">
+        <span>お問い合わせ種別</span>
+        <span class="req">必須</span>
+      </div>
+      <select id="contact-category" name="category" required>
+        <option value="">選択してください</option>
+        <option>サービスについて</option>
+        <option>体験・入会について</option>
+        <option>採用について</option>
+        <option>提携について</option>
+        <option>取材について</option>
+        <option>その他</option>
+      </select>
+    </div>
+
+    <div class="contact-form__row">
+      <div class="contact-form__label">
+        <span>お問い合わせ内容</span>
+        <span class="req">必須</span>
+      </div>
+      <textarea name="message" placeholder="ご相談の内容、背景、ご希望をご記入ください。" required></textarea>
+    </div>
+
+    <label class="contact-form__consent">
+      <input type="checkbox" name="privacy-consent" value="agreed" required>
+      <span>
+        <a href="{{ '/privacy/' | url }}">プライバシーポリシー</a>に同意のうえ、送信します。<br>
+        <span style="color: var(--ink-mute); font-size: 12px;">お預かりした情報は、お問い合わせ対応の目的以外には使用いたしません。</span>
+      </span>
+    </label>
+
+    <div class="contact-form__submit">
+      <button type="submit" class="btn btn--accent" disabled aria-disabled="true">
+        送信する <span class="btn__arrow"></span>
+      </button>
+    </div>
+  </form>
+</section>
+
+<section class="section section--sub">
+  <div class="container">
+    <div class="sec-head sec-head--center">
+      <div class="eyebrow" style="justify-content: center; display: inline-flex;">Other Channels</div>
+      <h2 class="h-headline">別のチャンネルも、<br>ご用意しています。</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div style="font-family: var(--font-latin); font-style: italic; color: var(--accent-2); font-size: 12px; letter-spacing: 0.08em; margin-bottom: 12px;">LINE</div>
+        <h4 style="font-family: var(--font-serif); font-size: 17px; font-weight: 500; margin: 0 0 12px; color: var(--ink); letter-spacing: 0.04em;">公式LINE</h4>
+        <p style="font-size: 13.5px; line-height: 1.9; color: var(--ink-sub); margin: 0 0 20px;">
+          気軽なご相談は、公式LINEからもお受けしています。
+        </p>
+        <a href="#" style="font-family: var(--font-serif); font-size: 13px; color: var(--ink); letter-spacing: 0.06em;">LINEで友だち追加 →</a>
+      </div>
+      <div class="card">
+        <div style="font-family: var(--font-latin); font-style: italic; color: var(--accent-2); font-size: 12px; letter-spacing: 0.08em; margin-bottom: 12px;">Trial</div>
+        <h4 style="font-family: var(--font-serif); font-size: 17px; font-weight: 500; margin: 0 0 12px; color: var(--ink); letter-spacing: 0.04em;">体験・入会サイト</h4>
+        <p style="font-size: 13.5px; line-height: 1.9; color: var(--ink-sub); margin: 0 0 20px;">
+          体験レッスン申込、料金比較は入会用サイトへ。
+        </p>
+        <a href="#" style="font-family: var(--font-serif); font-size: 13px; color: var(--ink); letter-spacing: 0.06em;">入会用サイトを見る →</a>
+      </div>
+      <div class="card">
+        <div style="font-family: var(--font-latin); font-style: italic; color: var(--accent-2); font-size: 12px; letter-spacing: 0.08em; margin-bottom: 12px;">Direct</div>
+        <h4 style="font-family: var(--font-serif); font-size: 17px; font-weight: 500; margin: 0 0 12px; color: var(--ink); letter-spacing: 0.04em;">メール・電話</h4>
+        <p style="font-size: 13.5px; line-height: 1.9; color: var(--ink-sub); margin: 0;">
+          <span class="ph">[代表電話・メールアドレスを入力]</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
