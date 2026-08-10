@@ -18,6 +18,37 @@ if (menuToggle && mobileMenu) {
   });
 }
 
+const navDropdownButtons = document.querySelectorAll("[data-nav-dropdown]");
+
+function closeNavDropdowns(exceptButton = null) {
+  navDropdownButtons.forEach((button) => {
+    if (button !== exceptButton) {
+      button.setAttribute("aria-expanded", "false");
+      button.closest(".site-nav__group")?.classList.remove("is-open");
+    }
+  });
+}
+
+navDropdownButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const group = button.closest(".site-nav__group");
+    const willOpen = !group?.classList.contains("is-open");
+    closeNavDropdowns(button);
+    group?.classList.toggle("is-open", willOpen);
+    button.setAttribute("aria-expanded", String(willOpen));
+  });
+});
+
+document.addEventListener("click", () => closeNavDropdowns());
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    const openButton = document.querySelector("[data-nav-dropdown][aria-expanded='true']");
+    closeNavDropdowns();
+    openButton?.focus();
+  }
+});
+
 const filterButtons = document.querySelectorAll("[data-news-filter]");
 const newsRows = document.querySelectorAll("[data-news-category]");
 
