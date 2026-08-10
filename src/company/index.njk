@@ -1,24 +1,89 @@
 ---
 layout: layouts/base.njk
 pageId: company
-title: 会社概要
-description: そろばんあっぷっぷを運営するAPUPUの会社情報です。
+title: 会社情報
+description: APUPUの代表メッセージ、ボードメンバー、会社概要、パートナーシップについてご紹介します。
 ---
 <section class="page-hero">
   <div class="page-hero__deco"></div>
   <div class="container page-hero__inner">
-    <div class="breadcrumbs"><a href="{{ '/' | url }}">HOME</a><span>／</span>会社概要</div>
-    <div class="eyebrow">Company ／ 会社概要</div>
-    <h1 class="page-hero__title">
-      運営する、私たち。
-    </h1>
-    <p class="page-hero__lead">
-      そろばんあっぷっぷ／APUPUは、以下の運営体制でサービスを提供しています。個人情報の取り扱い、お取引に関するお問い合わせは、下記の連絡先までお願いいたします。
-    </p>
+    <div class="breadcrumbs"><a href="{{ '/' | url }}">HOME</a><span>／</span>会社情報</div>
+    <div class="eyebrow">Company ／ 会社情報</div>
+    <h1 class="page-hero__title">運営する、<br>私たち。</h1>
+    <p class="page-hero__lead">APUPUをつくる人、会社、そして共に教育の未来をつくるパートナーについてご紹介します。</p>
   </div>
 </section>
 
-<section class="section company-table container">
+<nav class="company-local-nav container" aria-label="会社情報内のメニュー">
+  <a href="#message"><span>01</span>代表メッセージ</a>
+  <a href="#members"><span>02</span>ボードメンバー</a>
+  <a href="#profile"><span>03</span>会社概要</a>
+  <a href="#partners"><span>04</span>パートナー・提携</a>
+</nav>
+
+<section class="section container company-section" id="message">
+  <div class="sec-head">
+    <div class="eyebrow">Message from CEO ／ 代表メッセージ</div>
+    <h2 class="h-headline">数字は、<br>私にとって遊びでした。</h2>
+  </div>
+  <div class="message-page__grid">
+    <div class="message-page__photo ph-img">
+      <div class="ph-img__label ph-img__label--photo">[代表ポートレート：自然光／自然な表情／を入力してください]</div>
+    </div>
+    <div class="message-page__prose">
+      <h3>「勉強」ではなく、<br>「遊び」として、そろばんに出会いました。</h3>
+      <p>両親は、そろばん教室を運営していました。物心つく前から、私は教室の隅で、子どもたちがそろばんを弾く音を聞いて育ちました。3歳のころ、自然な流れで、私も珠を弾き始めました。</p>
+      <blockquote>そろばんは、私にとって勉強ではなく、遊びでした。</blockquote>
+      <p>珠の音が心地よくて、指を動かすとおもしろい形になって、数字がだんだん見えるようになっていく。ゲームのように、パズルのように、私はそろばんに夢中でした。</p>
+      <h3>教室の外へ、そろばん教育を届けるために。</h3>
+      <p>地方に住んでいる子ども、家庭の事情で通えない子ども、海外にいる日本人家庭。住んでいる場所や環境に左右されず、そろばん教育を届けたい。その思いから、教室の良さをオンラインで再設計することに踏み出しました。</p>
+      <h3>AI時代に、育てたい力があります。</h3>
+      <p>AIが答えを出すからこそ、その答えを読み解き、疑い、選び取る力が大切になります。私たちは、数字を楽しみ、自分で考え、失敗してもまた挑戦し、<strong>自分の未来を自分で選べる子ども</strong>を育てたいと考えています。</p>
+      <div class="message-page__sig">
+        <strong>[代表者氏名を入力]</strong>
+        <span>Founder / CEO ／ そろばんあっぷっぷ・APUPU</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sub company-section" id="members">
+  <div class="container">
+    <div class="sec-head">
+      <div class="eyebrow">Board Members ／ ボードメンバー</div>
+      <h2 class="h-headline">未来をつくる、<br>仲間たち。</h2>
+      <p class="h-lead">教育、経営、テクノロジー、クリエイティブ。異なる経験を持つ仲間が、子どもたちの可能性を広げるというひとつの目的に向かっています。</p>
+    </div>
+    <div class="members-grid">
+      <article class="member-card">
+        <div class="member-card__photo ph-img"><div class="ph-img__label ph-img__label--photo">[Founder / CEO のポートレートを入力]</div></div>
+        <div class="member-card__body"><div class="member-card__role">Founder / CEO</div><h3 class="member-card__name">[氏名を入力]</h3><p class="member-card__title-jp">担当：経営、教育理念、事業開発</p><p class="member-card__quote">数字を通じて、子どもたちの未来の選択肢を広げたい。</p></div>
+      </article>
+      <article class="member-card">
+        <div class="member-card__photo ph-img"><div class="ph-img__label ph-img__label--photo">[COO のポートレートを入力]</div></div>
+        <div class="member-card__body"><div class="member-card__role">COO</div><h3 class="member-card__name">[氏名を入力]</h3><p class="member-card__title-jp">担当：事業運営、教室オペレーション</p><p class="member-card__quote">[大切にしている言葉を入力してください]</p></div>
+      </article>
+      <article class="member-card">
+        <div class="member-card__photo ph-img"><div class="ph-img__label ph-img__label--photo">[CTO のポートレートを入力]</div></div>
+        <div class="member-card__body"><div class="member-card__role">CTO</div><h3 class="member-card__name">[氏名を入力]</h3><p class="member-card__title-jp">担当：プロダクト開発、テクノロジー</p><p class="member-card__quote">[大切にしている言葉を入力してください]</p></div>
+      </article>
+      <article class="member-card">
+        <div class="member-card__photo ph-img"><div class="ph-img__label ph-img__label--photo">[CXO / Design のポートレートを入力]</div></div>
+        <div class="member-card__body"><div class="member-card__role">CXO / Design</div><h3 class="member-card__name">[氏名を入力]</h3><p class="member-card__title-jp">担当：ブランド、UX、クリエイティブ</p><p class="member-card__quote">[大切にしている言葉を入力してください]</p></div>
+      </article>
+      <article class="member-card">
+        <div class="member-card__photo ph-img"><div class="ph-img__label ph-img__label--photo">[Head of Education のポートレートを入力]</div></div>
+        <div class="member-card__body"><div class="member-card__role">Head of Education</div><h3 class="member-card__name">[氏名を入力]</h3><p class="member-card__title-jp">担当：教育プログラム、講師育成</p><p class="member-card__quote">[大切にしている言葉を入力してください]</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section company-table container company-section" id="profile">
+  <div class="sec-head">
+    <div class="eyebrow">Company Profile ／ 会社概要</div>
+    <h2 class="h-headline">会社概要。</h2>
+  </div>
   <table>
     <tbody>
       <tr><th>ブランド名</th><td>そろばんあっぷっぷ ／ APUPU</td></tr>
@@ -26,38 +91,17 @@ description: そろばんあっぷっぷを運営するAPUPUの会社情報で�
       <tr><th>代表者</th><td><span class="ph">[代表者名を入力してください]</span></td></tr>
       <tr><th>設立</th><td><span class="ph">[設立年月を入力してください]</span></td></tr>
       <tr><th>所在地</th><td><span class="ph">[〒000-0000 所在地を入力してください]</span></td></tr>
-      <tr>
-        <th>事業内容</th>
-        <td>
-          ・オンラインそろばん教育事業<br>
-          ・デジタル教材・学習アプリの企画開発<br>
-          ・指導者育成、教育コンテンツの提供<br>
-          ・教育機関、自治体、法人との連携事業
-        </td>
-      </tr>
+      <tr><th>事業内容</th><td>・オンラインそろばん教育事業<br>・デジタル教材・学習アプリの企画開発<br>・指導者育成、教育コンテンツの提供<br>・教育機関、自治体、法人との連携事業</td></tr>
       <tr><th>連絡先</th><td><span class="ph">[代表電話／代表メールアドレスを入力してください]</span></td></tr>
       <tr><th>公式サイト</th><td><span class="ph">[URLを入力してください]</span></td></tr>
-      <tr>
-        <th>SNS</th>
-        <td>
-          Instagram：<span class="ph">[URLを入力]</span><br>
-          X（Twitter）：<span class="ph">[URLを入力]</span><br>
-          YouTube：<span class="ph">[URLを入力]</span><br>
-          公式LINE：<span class="ph">[URLを入力]</span>
-        </td>
-      </tr>
+      <tr><th>SNS</th><td>Instagram：<span class="ph">[URLを入力]</span><br>X（Twitter）：<span class="ph">[URLを入力]</span><br>YouTube：<span class="ph">[URLを入力]</span><br>公式LINE：<span class="ph">[URLを入力]</span></td></tr>
       <tr>
         <th>沿革</th>
         <td>
-          <div style="display: grid; grid-template-columns: 100px 1fr; gap: 8px 20px;">
-            <div style="font-family: var(--font-latin); color: var(--accent-2);"><span class="ph">[年月]</span></div>
-            <div>[主な出来事を入力してください]</div>
-            <div style="font-family: var(--font-latin); color: var(--accent-2);"><span class="ph">[年月]</span></div>
-            <div>[主な出来事を入力してください]</div>
-            <div style="font-family: var(--font-latin); color: var(--accent-2);"><span class="ph">[年月]</span></div>
-            <div>[主な出来事を入力してください]</div>
-            <div style="font-family: var(--font-latin); color: var(--accent-2);"><span class="ph">[年月]</span></div>
-            <div>[主な出来事を入力してください]</div>
+          <div class="company-history">
+            <div><span class="ph">[年月]</span></div><div>[主な出来事を入力してください]</div>
+            <div><span class="ph">[年月]</span></div><div>[主な出来事を入力してください]</div>
+            <div><span class="ph">[年月]</span></div><div>[主な出来事を入力してください]</div>
           </div>
         </td>
       </tr>
@@ -65,12 +109,48 @@ description: そろばんあっぷっぷを運営するAPUPUの会社情報で�
   </table>
 </section>
 
+<section class="partner-list company-section" id="partners">
+  <div class="container">
+    <div class="sec-head">
+      <div class="eyebrow">Partners ／ パートナー・提携</div>
+      <h2 class="h-headline">一社だけでは、<br>つくれない未来があります。</h2>
+      <p class="h-lead">教育機関、企業、地域、海外パートナーと共に、子どもたちの学びの可能性を広げます。対象と目的に応じて、連携の形を柔軟に設計します。</p>
+    </div>
+    <ul class="partner-targets">
+      <li>学習塾</li><li>教育事業者</li><li>学校</li><li>幼稚園・保育園</li><li>自治体</li><li>企業</li><li>海外教育事業者</li><li>メディア</li><li>教材会社</li><li>研究機関</li>
+    </ul>
+    <div class="partner-list__grid">
+      <div class="partner-list__item"><h3>教材・カリキュラム連携</h3><p>APUPUの教材や数字教育を、教室、学校、自治体の学習環境へ取り入れる連携です。</p></div>
+      <div class="partner-list__item"><h3>講座提供</h3><p>そろばんあっぷっぷの講座を、パートナーの会員・利用者向けに提供します。</p></div>
+      <div class="partner-list__item"><h3>共同イベント</h3><p>親子向けイベント、教育セミナー、大会などを共同で企画します。</p></div>
+      <div class="partner-list__item"><h3>パートナースクール</h3><p>各地域の教室と、APUPUの教育観や教材を軸に連携する構想です。</p></div>
+      <div class="partner-list__item"><h3>共同研究</h3><p>教育効果、学習継続、家庭学習などのテーマで研究機関と協働します。</p></div>
+      <div class="partner-list__item"><h3>海外・メディア連携</h3><p>海外展開、取材、寄稿、登壇などのご相談をお受けします。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sub">
+  <div class="container">
+    <div class="sec-head">
+      <div class="eyebrow">How to Reach Us</div>
+      <h2 class="h-headline">まずは、<br>ご相談から。</h2>
+    </div>
+    <div class="flow-steps company-partner-flow">
+      <div class="flow-steps__step"><div class="flow-steps__step-num">Step 01</div><h3>ご連絡</h3><p>お問い合わせフォームからご連絡ください。</p></div>
+      <div class="flow-steps__step"><div class="flow-steps__step-num">Step 02</div><h3>ヒアリング</h3><p>課題感や目的をオンラインで共有します。</p></div>
+      <div class="flow-steps__step"><div class="flow-steps__step-num">Step 03</div><h3>企画・提案</h3><p>目的に合った連携の形を双方で考えます。</p></div>
+      <div class="flow-steps__step"><div class="flow-steps__step-num">Step 04</div><h3>実施・伴走</h3><p>実施後も、共に取り組みを育てます。</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="final-cta">
   <div class="container">
-    <h2 class="final-cta__title">お問い合わせは、<br>目的別にご用意しています。</h2>
+    <h2 class="final-cta__title">私たちと、<br>話してみませんか。</h2>
+    <p class="final-cta__sub">取材、採用、パートナーシップなど、目的に合わせた窓口をご用意しています。</p>
     <div class="final-cta__ctas">
       <a href="{{ '/contact/' | url }}" class="btn btn--accent">お問い合わせ <span class="btn__arrow"></span></a>
-      <a href="{{ '/partners/' | url }}" class="btn btn--ghost">パートナー・提携 <span class="btn__arrow"></span></a>
       <a href="{{ '/careers/' | url }}" class="btn btn--ghost">採用情報 <span class="btn__arrow"></span></a>
     </div>
   </div>
