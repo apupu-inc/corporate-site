@@ -67,6 +67,12 @@
   --shadow-lg: 0 24px 56px rgba(27,42,78,0.10);
 }
 
+@media (min-width: 1024px) {
+  :root {
+    --gutter: clamp(64px, 6vw, 96px);
+  }
+}
+
 body[data-tone="B"] {
   --bg: var(--b-bg);
   --bg-sub: var(--b-bg-sub);
@@ -270,29 +276,6 @@ body[data-tone="B"] .site-header {
   background: var(--warm);
 }
 
-.site-header__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 22px;
-  background: var(--ink);
-  color: var(--bg);
-  border-radius: 100px;
-  font-family: var(--font-serif);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  flex-shrink: 0;
-  transition: all 0.3s ease;
-}
-.site-header__cta:hover {
-  background: var(--accent);
-  color: var(--ink);
-  transform: translateY(-1px);
-}
-.site-header__cta svg { transition: transform 0.3s ease; }
-.site-header__cta:hover svg { transform: translateX(3px); }
-
 .site-header__menu {
   display: none;
   border: none;
@@ -318,11 +301,6 @@ body[data-tone="B"] .site-header {
   .site-nav { display: none; }
   .site-header__menu { display: flex; }
 }
-@media (max-width: 640px) {
-  .site-header__cta span { display: none; }
-  .site-header__cta { width: 40px; height: 40px; padding: 0; justify-content: center; }
-}
-
 /* Mobile menu */
 .mobile-menu {
   position: fixed;
@@ -403,8 +381,8 @@ body[data-tone="B"] .site-header {
 .container--wide { max-width: var(--wide-max); }
 .container--narrow { max-width: 880px; }
 
-.section { padding: clamp(72px, 10vw, 140px) 0; }
-.section--tight { padding: clamp(48px, 6vw, 80px) 0; }
+.section { padding-block: clamp(72px, 10vw, 140px); }
+.section--tight { padding-block: clamp(48px, 6vw, 80px); }
 .section--sub { background: var(--bg-sub); }
 .section--warm { background: var(--bg-warm); }
 .section--ink { background: var(--ink); color: var(--bg); }
@@ -2257,34 +2235,6 @@ body[data-tone="B"] .site-header {
 /* ============================================
    News list & detail
    ============================================ */
-.news-filter {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  overflow-x: auto;
-}
-.news-filter button {
-  background: transparent;
-  border: 1px solid var(--line);
-  padding: 8px 20px;
-  border-radius: 100px;
-  cursor: pointer;
-  color: var(--ink-sub);
-  font-family: var(--font-serif);
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-.news-filter button.is-active,
-.news-filter button:hover {
-  background: var(--ink);
-  color: var(--bg);
-  border-color: var(--ink);
-}
-
 .news-list {
   padding: clamp(40px, 6vw, 72px) 0;
 }
@@ -2523,71 +2473,8 @@ body[data-tone="B"] .site-header {
   box-shadow: 0 0 0 4px rgba(27,42,78,0.06);
 }
 .contact-form textarea { min-height: 180px; resize: vertical; }
-.contact-form__consent {
-  padding: 20px;
-  background: var(--bg-sub);
-  border-radius: var(--radius-sm);
-  font-size: 13px;
-  color: var(--ink-sub);
-  line-height: 1.9;
-  margin-bottom: 32px;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-.contact-form__consent input[type="checkbox"] {
-  width: auto;
-  margin-top: 6px;
-}
-.contact-form__consent a {
-  color: var(--ink);
-  text-decoration: underline;
-}
 .contact-form__submit {
   text-align: center;
-}
-
-/* ============================================
-   Privacy
-   ============================================ */
-.privacy-body {
-  padding: clamp(40px, 6vw, 72px) 0 clamp(60px, 8vw, 100px);
-  max-width: 800px;
-  margin: 0 auto;
-}
-.privacy-body h2 {
-  font-family: var(--font-serif);
-  font-size: 20px;
-  font-weight: 500;
-  margin: 48px 0 20px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-  letter-spacing: 0.04em;
-  color: var(--ink);
-}
-.privacy-body h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
-.privacy-body p {
-  font-family: var(--font-sans);
-  font-size: 14.5px;
-  line-height: 2.1;
-  color: var(--ink-sub);
-  margin: 0 0 16px;
-}
-.privacy-body ul {
-  padding-left: 20px;
-  font-size: 14.5px;
-  line-height: 2.1;
-  color: var(--ink-sub);
-}
-.privacy-body ul li { margin-bottom: 4px; }
-.privacy-body__meta {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  color: var(--ink-mute);
-  margin-top: 60px;
-  padding-top: 24px;
-  border-top: 1px solid var(--line);
-  letter-spacing: 0.06em;
 }
 
 /* ============================================

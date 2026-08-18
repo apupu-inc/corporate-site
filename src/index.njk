@@ -22,11 +22,8 @@ description: そろばんあっぷっぷ（APUPU）は、数字を通じて子�
         <a href="{{ '/about/' | url }}" class="btn btn--accent">
           そろばんあっぷっぷを知る <span class="btn__arrow"></span>
         </a>
-        <a href="{{ '/services/' | url }}" class="btn btn--ghost">
-          サービスを見る <span class="btn__arrow"></span>
-        </a>
         <a href="{{ site.trialUrl }}" class="btn btn--ghost">
-          体験・入会はこちら <span class="btn__arrow"></span>
+          サービスを見る <span class="btn__arrow"></span>
         </a>
       </div>
     </div>
@@ -46,6 +43,37 @@ description: そろばんあっぷっぷ（APUPU）は、数字を通じて子�
   <div class="hero__badges">
     <span>Online Education</span>
     <span>For Children &amp; Family</span>
+  </div>
+</section>
+
+<!-- ============ お知らせ ============ -->
+<section class="section container">
+  <div class="sec-head">
+    <div class="eyebrow">News</div>
+    <h2 class="h-headline">お知らせ</h2>
+  </div>
+  <div class="news-list">
+    {% for post in collections.news | reverse %}
+      {% if loop.index <= 3 %}
+        <a class="news-row" href="{{ post.url | url }}">
+          <div class="news-row__thumb ph-img" aria-hidden="true"></div>
+          <div>
+            <div class="news-row__meta">
+              <time class="news-row__date" datetime="{{ post.date | htmlDate }}">{{ post.date | jaDate }}</time>
+              <span class="news-row__cat">{{ post.data.category }}</span>
+            </div>
+            <h3 class="news-row__title">{{ post.data.title }}</h3>
+            <p class="news-row__excerpt">{{ post.data.description }}</p>
+          </div>
+          <div class="news-row__arrow" aria-hidden="true"></div>
+        </a>
+      {% endif %}
+    {% else %}
+      <p>現在、お知らせはありません。</p>
+    {% endfor %}
+  </div>
+  <div style="text-align: right;">
+    <a href="{{ '/news/' | url }}" class="btn btn--ghost">お知らせ一覧を見る <span class="btn__arrow"></span></a>
   </div>
 </section>
 
@@ -280,8 +308,7 @@ description: そろばんあっぷっぷ（APUPU）は、数字を通じて子�
           <li><strong>提供価値</strong><span>思考習慣と自己肯定感の育成</span></li>
         </ul>
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="{{ '/services/' | url }}" class="btn btn--ghost">サービス詳細を見る <span class="btn__arrow"></span></a>
-          <a href="{{ site.trialUrl }}" class="btn btn--accent">体験・入会サイトへ <span class="btn__arrow"></span></a>
+          <a href="{{ site.trialUrl }}" class="btn btn--ghost">サービス詳細を見る <span class="btn__arrow"></span></a>
         </div>
       </div>
     </div>
@@ -292,60 +319,7 @@ description: そろばんあっぷっぷ（APUPU）は、数字を通じて子�
   </p>
 </section>
 
-<!-- ============ セクション8：ボードメンバー予告 ============ -->
-<section class="section section--sub">
-  <div class="container">
-    <div class="sec-head">
-      <div class="eyebrow">Board Members</div>
-      <h2 class="h-headline">この未来を、<br>一緒につくる人たち。</h2>
-      <p class="h-lead">
-        異なる経験や専門性を持つ仲間が、子どもたちの可能性を広げるという一つの目的のもとに集まっています。それぞれの立場から、APUPUの未来をつくっています。
-      </p>
-    </div>
-    <div class="member-teaser">
-
-        <div class="member-teaser__card">
-          <div class="member-teaser__photo ph-img">
-            <div class="ph-img__label ph-img__label--photo">[ポートレートを入力]</div>
-          </div>
-          <p class="member-teaser__role">Founder / CEO</p>
-          <h4 class="member-teaser__name">[氏名を入力]</h4>
-        </div>
-
-        <div class="member-teaser__card">
-          <div class="member-teaser__photo ph-img">
-            <div class="ph-img__label ph-img__label--photo">[ポートレートを入力]</div>
-          </div>
-          <p class="member-teaser__role">COO</p>
-          <h4 class="member-teaser__name">[氏名を入力]</h4>
-        </div>
-
-        <div class="member-teaser__card">
-          <div class="member-teaser__photo ph-img">
-            <div class="ph-img__label ph-img__label--photo">[ポートレートを入力]</div>
-          </div>
-          <p class="member-teaser__role">CTO</p>
-          <h4 class="member-teaser__name">[氏名を入力]</h4>
-        </div>
-
-        <div class="member-teaser__card">
-          <div class="member-teaser__photo ph-img">
-            <div class="ph-img__label ph-img__label--photo">[ポートレートを入力]</div>
-          </div>
-          <p class="member-teaser__role">CXO / Design</p>
-          <h4 class="member-teaser__name">[氏名を入力]</h4>
-        </div>
-
-    </div>
-    <div style="margin-top: 48px; text-align: center;">
-      <a href="{{ '/members/' | url }}" class="btn btn--ghost">
-        ボードメンバーを見る <span class="btn__arrow"></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ セクション9：目指す未来 ============ -->
+<!-- ============ セクション8：目指す未来 ============ -->
 <section class="vision-block">
   <div class="container">
     <div class="vision-block__inner">
@@ -364,7 +338,7 @@ description: そろばんあっぷっぷ（APUPU）は、数字を通じて子�
   </div>
 </section>
 
-<!-- ============ セクション10：代表メッセージ導線 ============ -->
+<!-- ============ セクション9：代表メッセージ導線 ============ -->
 <section class="message-teaser container">
   <div class="message-teaser__grid">
     <div class="message-teaser__photo ph-img">
@@ -389,7 +363,7 @@ description: そろばんあっぷっぷ（APUPU）は、数字を通じて子�
   </div>
 </section>
 
-<!-- ============ セクション11：最終CTA ============ -->
+<!-- ============ セクション10：最終CTA ============ -->
 <section class="final-cta">
   <div class="container">
     <div class="eyebrow" style="justify-content: center; display: inline-flex; margin-bottom: 24px;">Start Here</div>
@@ -400,11 +374,8 @@ description: そろばんあっぷっぷ（APUPU）は、数字を通じて子�
       サービスをもっと知りたい方、体験してみたい方、ご相談したい方――<br>それぞれの入口を、ご用意しています。
     </p>
     <div class="final-cta__ctas">
-      <a href="{{ '/services/' | url }}" class="btn btn--ghost">
+      <a href="{{ site.trialUrl }}" class="btn btn--ghost">
         サービスを見る <span class="btn__arrow"></span>
-      </a>
-      <a href="{{ site.trialUrl }}" class="btn btn--accent">
-        体験・入会はこちら <span class="btn__arrow"></span>
       </a>
       <a href="{{ '/contact/' | url }}" class="btn btn--ghost">
         お問い合わせ <span class="btn__arrow"></span>

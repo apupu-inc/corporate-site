@@ -15,15 +15,9 @@ description: サービス更新、イベント、メディア掲載、教育コ�
 </section>
 
 <section class="container">
-  <div class="news-filter" aria-label="お知らせのカテゴリ">
-    {% for category in ["すべて", "お知らせ", "サービス", "イベント", "メディア", "採用", "アップデート", "教育コラム"] %}
-      <button type="button" class="{% if loop.first %}is-active{% endif %}" data-news-filter="{{ category }}">{{ category }}</button>
-    {% endfor %}
-  </div>
-
   <div class="news-list">
     {% for post in collections.news | reverse %}
-      <a class="news-row" href="{{ post.url | url }}" data-news-category="{{ post.data.category }}">
+      <a class="news-row" href="{{ post.url | url }}">
         <div class="news-row__thumb ph-img" aria-hidden="true"></div>
         <div>
           <div class="news-row__meta">

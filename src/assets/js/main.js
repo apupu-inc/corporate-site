@@ -49,19 +49,6 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-const filterButtons = document.querySelectorAll("[data-news-filter]");
-const newsRows = document.querySelectorAll("[data-news-category]");
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const category = button.dataset.newsFilter;
-    filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
-    newsRows.forEach((row) => {
-      row.hidden = category !== "すべて" && row.dataset.newsCategory !== category;
-    });
-  });
-});
-
 document.querySelectorAll("[data-contact-type]").forEach((card) => {
   card.addEventListener("click", () => {
     document.querySelectorAll("[data-contact-type]").forEach((item) => item.classList.toggle("is-active", item === card));
