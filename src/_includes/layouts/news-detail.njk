@@ -2,15 +2,6 @@
 layout: layouts/base.njk
 pageId: news-detail
 ---
-<section class="page-hero">
-  <div class="container page-hero__inner">
-    <div class="breadcrumbs">
-      <a href="{{ '/' | url }}">HOME</a><span>／</span>
-      <a href="{{ '/news/' | url }}">お知らせ</a><span>／</span>記事詳細
-    </div>
-  </div>
-</section>
-
 <article class="news-detail">
   <div class="news-detail__meta">
     <time class="news-row__date" datetime="{{ date | htmlDate }}">{{ date | jaDate }}</time>
@@ -35,10 +26,10 @@ pageId: news-detail
 
 <section class="final-cta">
   <div class="container">
-    <h2 class="final-cta__title">APUPUをもっと知る。</h2>
+    <h2 class="final-cta__title">あっぷっぷをもっと知る。</h2>
     <div class="final-cta__ctas">
       <a href="{{ '/philosophy/' | url }}" class="btn btn--ghost">教育について <span class="btn__arrow"></span></a>
-      <a href="{{ '/method/' | url }}" class="btn btn--ghost">APUPU METHOD <span class="btn__arrow"></span></a>
+      <a href="{{ '/method/' | url }}" class="btn btn--ghost">あっぷっぷ METHOD <span class="btn__arrow"></span></a>
       <a href="{{ '/contact/' | url }}" class="btn btn--accent">お問い合わせ <span class="btn__arrow"></span></a>
     </div>
   </div>

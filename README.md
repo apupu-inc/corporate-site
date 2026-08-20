@@ -1,6 +1,6 @@
-# APUPU Corporate Site
+# あっぷっぷ Corporate Site
 
-「そろばんあっぷっぷ（APUPU）」のコーポレートサイトです。Eleventyで各ページを静的HTMLとして生成し、GitHub ActionsからGitHub Pagesへ公開します。
+「そろばんあっぷっぷ」のコーポレートサイトです。Eleventyで各ページを静的HTMLとして生成し、GitHub ActionsからGitHub Pagesへ公開します。
 
 ## Setup
 

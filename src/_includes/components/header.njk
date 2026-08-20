@@ -1,17 +1,18 @@
 <header class="site-header" id="siteHeader">
-  <a href="{{ '/' | url }}" class="site-header__brand" aria-label="そろばんあっぷっぷ トップページ">
-    <img src="{{ '/assets/images/logo.png' | url }}" alt="そろばんあっぷっぷ APUPU" class="site-header__logo">
-  </a>
+  <div class="site-header__inner">
+    <a href="{{ '/' | url }}" class="site-header__brand" aria-label="そろばんあっぷっぷ トップページ">
+      <img src="{{ '/assets/images/logo.png' | url }}" alt="そろばんあっぷっぷ" class="site-header__logo">
+    </a>
 
-  <nav class="site-nav" aria-label="グローバルナビゲーション">
+    <nav class="site-nav" aria-label="グローバルナビゲーション">
     <div class="site-nav__group{% if pageId == 'about' or pageId == 'philosophy' or pageId == 'method' %} is-current{% endif %}">
       <button class="site-nav__trigger" type="button" data-nav-dropdown aria-expanded="false" aria-controls="nav-about">
-        APUPUについて <span class="site-nav__chevron" aria-hidden="true"></span>
+        あっぷっぷについて <span class="site-nav__chevron" aria-hidden="true"></span>
       </button>
       <div class="site-nav__dropdown" id="nav-about">
         <a href="{{ '/about/' | url }}"{% if pageId == 'about' %} aria-current="page"{% endif %}>私たちについて</a>
         <a href="{{ '/philosophy/' | url }}"{% if pageId == 'philosophy' %} aria-current="page"{% endif %}>教育について</a>
-        <a href="{{ '/method/' | url }}"{% if pageId == 'method' %} aria-current="page"{% endif %}>APUPU METHOD</a>
+        <a href="{{ '/method/' | url }}"{% if pageId == 'method' %} aria-current="page"{% endif %}>あっぷっぷ METHOD</a>
       </div>
     </div>
 
@@ -32,11 +33,12 @@
     <a href="{{ '/careers/' | url }}"{% if pageId == 'careers' %} class="is-current" aria-current="page"{% endif %}>採用情報</a>
     <a href="{{ '/news/' | url }}"{% if pageId == 'news' or pageId == 'news-detail' %} class="is-current" aria-current="page"{% endif %}>お知らせ</a>
     <a href="{{ '/contact/' | url }}"{% if pageId == 'contact' %} class="is-current" aria-current="page"{% endif %}>お問い合わせ</a>
-  </nav>
+    </nav>
 
-  <button class="site-header__menu" id="menuToggle" type="button" aria-label="メニュー" aria-controls="mobileMenu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+    <button class="site-header__menu" id="menuToggle" type="button" aria-label="メニュー" aria-controls="mobileMenu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
@@ -45,11 +47,11 @@
       <a href="{{ '/' | url }}">トップ</a>
 
       <div class="mobile-menu__section">
-        <div class="mobile-menu__heading">APUPUについて</div>
+        <div class="mobile-menu__heading">あっぷっぷについて</div>
         <div class="mobile-menu__subnav">
           <a href="{{ '/about/' | url }}">私たちについて</a>
           <a href="{{ '/philosophy/' | url }}">教育について</a>
-          <a href="{{ '/method/' | url }}">APUPU METHOD</a>
+          <a href="{{ '/method/' | url }}">あっぷっぷ METHOD</a>
         </div>
       </div>
 
