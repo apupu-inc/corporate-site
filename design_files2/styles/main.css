@@ -1,5 +1,5 @@
 /* ============================================
-   株式会社あっぷっぷ
+   そろばんあっぷっぷ ／ APUPU
    Corporate Site Design System
    ============================================ */
 
@@ -2651,31 +2651,9 @@ body[data-tone="B"] .site-header {
 }
 .site-footer__cols {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
-
-/* Production utilities */
-.skip-link {
-  position: fixed;
-  top: 8px;
-  left: 8px;
-  z-index: 200;
-  padding: 10px 16px;
-  border-radius: var(--radius-sm);
-  background: var(--ink);
-  color: var(--bg);
-  transform: translateY(-160%);
-}
-.skip-link:focus { transform: translateY(0); }
-:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
-body.menu-open { overflow: hidden; }
-[hidden] { display: none !important; }
-.news-index { padding-bottom: clamp(72px, 10vw, 140px); }
-.news-detail__image { aspect-ratio: 16 / 9; border-radius: var(--radius); margin-bottom: 40px; }
-.contact-form__submit .btn:disabled { cursor: not-allowed; opacity: 0.45; }
-.contact-form__status { max-width: 560px; margin: 16px auto 0; color: var(--ink-mute); font-size: 12px; line-height: 1.8; }
-.contact-form__status a { color: var(--ink); text-decoration: underline; }
 .site-footer__cols h4 {
   font-family: var(--font-serif);
   font-size: 13px;

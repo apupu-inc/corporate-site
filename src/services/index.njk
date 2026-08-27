@@ -2,17 +2,18 @@
 layout: layouts/base.njk
 pageId: services
 title: 事業・サービス
-description: オンラインそろばんレッスン「そろばんあっぷっぷ」と今後の事業構想をご紹介します。
+description: 株式会社あっぷっぷが提供するオンラインそろばんレッスン「そろばんあっぷっぷ」と今後の構想をご紹介します。
 ---
 <section class="page-hero">
   <div class="page-hero__deco"></div>
   <div class="container page-hero__inner">
+    <div class="breadcrumbs"><a href="{{ '/' | url }}">HOME</a><span>／</span>事業・サービス</div>
     <div class="eyebrow">Services ／ 事業・サービス</div>
     <h1 class="page-hero__title">
       いま私たちが届けているのは、<br>ひとつのサービス。
     </h1>
     <p class="page-hero__lead">
-      現在、あっぷっぷが提供しているサービスはオンラインそろばんレッスン「そろばんあっぷっぷ」のみです。まずはこの一点に集中し、目の前の子どもたちに、確かな学びの時間を届けることに向き合っています。
+      現在、株式会社あっぷっぷが提供しているサービスはオンラインそろばんレッスン「そろばんあっぷっぷ」のみです。まずはこの一点に集中し、目の前の子どもたちに、確かな学びの時間を届けることに向き合っています。
     </p>
   </div>
 </section>
@@ -21,9 +22,11 @@ description: オンラインそろばんレッスン「そろばんあっぷっ�
 
     <div class="service-block">
       <div class="service-block__grid">
-        <div class="ph-img" style="aspect-ratio: 5/4; border-radius: var(--radius-lg);">
-          <div class="ph-img__label ph-img__label--photo">[オンラインそろばんレッスン「そろばんあっぷっぷ」 のイメージ写真を入力してください]</div>
-        </div>
+
+          <div class="service-block__photo">
+            <img src="{{ '/assets/images/lesson-scene.jpg' | url }}" alt="そろばんあっぷっぷ オンラインレッスン風景" loading="lazy">
+          </div>
+
         <div>
           <span class="service-block__tag">Service 01</span>
           <h2 class="service-block__title">オンラインそろばんレッスン「そろばんあっぷっぷ」</h2>
@@ -45,7 +48,7 @@ description: オンラインそろばんレッスン「そろばんあっぷっ�
       <div class="eyebrow">Future ／ 今後の構想</div>
       <h2 class="h-headline">私たちが、<br>これから挑む場所。</h2>
       <p class="h-lead">
-        現在は「そろばんあっぷっぷ」一本に集中していますが、その先にあっぷっぷが向かっていく方向性を、素直に記しておきます。いずれも、子どもたちの可能性を広げるための挑戦として、丁寧に育てていきます。
+        現在は「そろばんあっぷっぷ」一本に集中していますが、その先に株式会社あっぷっぷが向かっていく方向性を、素直に記しておきます。いずれも、子どもたちの可能性を広げるための挑戦として、丁寧に育てていきます。
       </p>
     </div>
     <div class="future-roadmap__list">
@@ -78,7 +81,7 @@ description: オンラインそろばんレッスン「そろばんあっぷっ�
           <div class="future-item__mark">04</div>
           <div>
             <h5>パートナースクール構想</h5>
-            <p>各地域のパートナー教室と、あっぷっぷの教育を広げます。</p>
+            <p>各地域のパートナー教室と、株式会社あっぷっぷの教育を広げます。</p>
           </div>
         </div>
 
@@ -94,7 +97,7 @@ description: オンラインそろばんレッスン「そろばんあっぷっ�
           <div class="future-item__mark">06</div>
           <div>
             <h5>教育メソッドの体系化</h5>
-            <p>あっぷっぷ独自の教育観を、伝えられる形に整えていきます。</p>
+            <p>株式会社あっぷっぷ独自の教育観を、伝えられる形に整えていきます。</p>
           </div>
         </div>
 
@@ -112,11 +115,11 @@ description: オンラインそろばんレッスン「そろばんあっぷっ�
 
 <section class="final-cta">
   <div class="container">
-    <h2 class="final-cta__title">サービスの詳細は、<br>入会用サイトへ。</h2>
-    <p class="final-cta__sub">料金プラン、時間割、体験申込などの詳しい情報は、<br>入会用サイトをご確認ください。</p>
+    <h2 class="final-cta__title">サービスの詳細は、<br>サービスLPへ。</h2>
+    <p class="final-cta__sub">料金プラン、時間割、レッスンお申込みなどの詳しい情報は、<br>別サイトである「そろばんあっぷっぷ」サービスLPをご確認ください。<br>本コーポレートサイトでは、お申し込みの受付は行っておりません。</p>
     <div class="final-cta__ctas">
-      <a href="{{ site.trialUrl }}" class="btn btn--accent">入会用サイトを見る <span class="btn__arrow"></span></a>
-      <a href="{{ '/contact/' | url }}" class="btn btn--ghost">お問い合わせ <span class="btn__arrow"></span></a>
+      <a href="{{ site.serviceUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn--accent">サービスLPを見る　↗</a>
+      <a href="{{ '/contact/' | url }}" class="btn btn--ghost">会社へのお問い合わせ <span class="btn__arrow"></span></a>
     </div>
   </div>
 </section>

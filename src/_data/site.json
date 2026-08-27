@@ -1,8 +1,10 @@
 {
-  "name": "そろばんあっぷっぷ",
-  "defaultTitle": "そろばんあっぷっぷ｜数字を味方に。未来を自由に。",
-  "description": "そろばんあっぷっぷは、数字を通じて子どもたちの未来の可能性を広げるオンライン教育ブランドです。",
+  "name": "株式会社あっぷっぷ",
+  "defaultTitle": "株式会社あっぷっぷ｜数字を味方に。未来を自由に。",
+  "description": "株式会社あっぷっぷは、オンラインそろばんレッスン「そろばんあっぷっぷ」を提供する教育会社です。",
   "language": "ja",
   "copyrightYear": "2026",
-  "trialUrl": "https://lp.soroban-apupu.com/"
+  "serviceUrl": "https://lp.soroban-apupu.com/",
+  "instagramUrl": "https://www.instagram.com/soroban_apupu?igsi=MWhvZW5vbDRncXYwdA%3D%3D&utm_source=qr",
+  "email": "support@apupu.family"
 }

@@ -1,8 +1,4 @@
----
-layout: layouts/base.njk
-pageId: top
-description: 株式会社あっぷっぷは、オンラインそろばんレッスン「そろばんあっぷっぷ」を提供する教育会社です。
----
+window.PAGE_TOP = () => `
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero__grid-deco"></div>
@@ -19,17 +15,17 @@ description: 株式会社あっぷっぷは、オンラインそろばんレッ�
         株式会社あっぷっぷは、オンラインそろばんレッスン「そろばんあっぷっぷ」を提供する教育会社です。数字を通じて、子どもたちの未来の土台をつくります。
       </p>
       <div class="hero__ctas">
-        <a href="{{ '/services/' | url }}" class="btn btn--accent">
+        <a href="#services" data-nav="services" class="btn btn--accent">
           サービスを見る　<span class="btn__arrow"></span>
         </a>
-        <a href="{{ '/message/' | url }}" class="btn btn--ghost">
+        <a href="#message" data-nav="message" class="btn btn--ghost">
           代表メッセージ <span class="btn__arrow"></span>
         </a>
       </div>
     </div>
     <div class="hero__visual">
       <div class="hero__image">
-        <img src="{{ '/assets/images/hero-main.jpg' | url }}" alt="そろばんを楽しむ親子" loading="eager">
+        <img src="assets/hero-main.jpg" alt="そろばんを楽しむ親子" loading="eager">
       </div>
       <div class="hero__visual-tag">
         <div class="hero__visual-tag-icon">未</div>
@@ -107,7 +103,7 @@ description: 株式会社あっぷっぷは、オンラインそろばんレッ�
     <div class="service-block">
       <div class="service-block__grid">
         <div class="service-block__photo">
-          <img src="{{ '/assets/images/lesson-scene.jpg' | url }}" alt="そろばんあっぷっぷ オンラインレッスン風景" loading="lazy">
+          <img src="assets/lesson-scene.jpg" alt="そろばんあっぷっぷ オンラインレッスン風景" loading="lazy">
         </div>
         <div>
           <span class="service-block__tag">Service ／ 唯一の提供サービス</span>
@@ -122,8 +118,8 @@ description: 株式会社あっぷっぷは、オンラインそろばんレッ�
             <li><strong>提供価値</strong><span>圧倒的な計算能力の獲得と自己肯定感の育成</span></li>
           </ul>
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <a href="{{ '/services/' | url }}" class="btn btn--ghost">サービス詳細を見る <span class="btn__arrow"></span></a>
-            <a href="{{ site.serviceUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn--accent">サービスLPを見る　↗</a>
+            <a href="#services" data-nav="services" class="btn btn--ghost">サービス詳細を見る <span class="btn__arrow"></span></a>
+            <a href="#" target="_blank" rel="noopener" class="btn btn--accent">サービスLPを見る　↗</a>
           </div>
           <p style="margin: 12px 0 0; font-size: 12px; color: var(--ink-mute); line-height: 1.7;">※ レッスンの申込・料金・時間割などの詳細は、別サイトである「そろばんあっぷっぷ」サービスLPにてご案内しております。</p>
         </div>
@@ -142,34 +138,22 @@ description: 株式会社あっぷっぷは、オンラインそろばんレッ�
     </p>
   </div>
   <div class="member-teaser">
-
+    ${[
+      {role: 'Founder / CEO', name: '藤村　大生'},
+      {role: 'COO', name: '惠上　裕介'},
+      {role: 'CTO', name: '石野　隼伍'},
+    ].map(m => `
       <div class="member-teaser__card">
         <div class="member-teaser__photo ph-img">
-          <div class="ph-img__label ph-img__label--photo">[ポートレートを入力]</div>
+          <div class="ph-img__label ph-img__label--photo">${'[ポートレートを入力]'}</div>
         </div>
-        <p class="member-teaser__role">Founder / CEO</p>
-        <h4 class="member-teaser__name">藤村　大生</h4>
+        <p class="member-teaser__role">${m.role}</p>
+        <h4 class="member-teaser__name">${m.name}</h4>
       </div>
-
-      <div class="member-teaser__card">
-        <div class="member-teaser__photo ph-img">
-          <div class="ph-img__label ph-img__label--photo">[ポートレートを入力]</div>
-        </div>
-        <p class="member-teaser__role">COO</p>
-        <h4 class="member-teaser__name">惠上　裕介</h4>
-      </div>
-
-      <div class="member-teaser__card">
-        <div class="member-teaser__photo ph-img">
-          <div class="ph-img__label ph-img__label--photo">[ポートレートを入力]</div>
-        </div>
-        <p class="member-teaser__role">CTO</p>
-        <h4 class="member-teaser__name">石野　隼伍</h4>
-      </div>
-
+    `).join('')}
   </div>
   <div style="margin-top: 48px; text-align: center;">
-    <a href="{{ '/members/' | url }}" class="btn btn--ghost">
+    <a href="#members" data-nav="members" class="btn btn--ghost">
       ボードメンバーを見る <span class="btn__arrow"></span>
     </a>
   </div>
@@ -193,7 +177,7 @@ description: 株式会社あっぷっぷは、オンラインそろばんレッ�
         <strong>藤村　大生</strong>
         <span>Founder / CEO ／ 株式会社あっぷっぷ</span>
       </div>
-      <a href="{{ '/message/' | url }}" class="btn btn--ghost">
+      <a href="#message" data-nav="message" class="btn btn--ghost">
         代表メッセージを読む <span class="btn__arrow"></span>
       </a>
     </div>
@@ -211,15 +195,16 @@ description: 株式会社あっぷっぷは、オンラインそろばんレッ�
       会社についてのご相談・取材・ご問い合わせはこちらから。<br>レッスンの詳細・料金・申込については、サービスLPをご覧ください。
     </p>
     <div class="final-cta__ctas">
-      <a href="{{ '/contact/' | url }}" class="btn btn--accent">
+      <a href="#contact" data-nav="contact" class="btn btn--accent">
         お問い合わせ <span class="btn__arrow"></span>
       </a>
-      <a href="{{ '/services/' | url }}" class="btn btn--ghost">
+      <a href="#services" data-nav="services" class="btn btn--ghost">
         事業・サービス <span class="btn__arrow"></span>
       </a>
-      <a href="{{ site.serviceUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+      <a href="#" target="_blank" rel="noopener" class="btn btn--ghost">
         サービスLPを見る　↗
       </a>
     </div>
   </div>
 </section>
+`;

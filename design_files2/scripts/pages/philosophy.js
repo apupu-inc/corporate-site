@@ -1,12 +1,8 @@
----
-layout: layouts/base.njk
-pageId: philosophy
-title: 教育について
-description: あっぷっぷが大切にしている教育観と、子どもとの向き合い方をご紹介します。
----
+window.PAGE_PHILOSOPHY = () => `
 <section class="page-hero">
   <div class="page-hero__deco"></div>
   <div class="container page-hero__inner">
+    <div class="breadcrumbs"><a href="#top" data-nav="top">HOME</a><span>／</span>教育について</div>
     <div class="eyebrow">Philosophy ／ 教育について</div>
     <h1 class="page-hero__title">
       計算力の、<br>その先へ。
@@ -152,10 +148,11 @@ description: あっぷっぷが大切にしている教育観と、子どもと�
 <section class="final-cta">
   <div class="container">
     <h2 class="final-cta__title">教育観を、方法論へ。</h2>
-    <p class="final-cta__sub">私たちの教育観が、どのようにサービスに落とし込まれているのか。<br>あっぷっぷ METHODで、詳しくお伝えします。</p>
+    <p class="final-cta__sub">私たちの教育観が、どのようにサービスに落とし込まれているのか。<br>APUPU METHODで、詳しくお伝えします。</p>
     <div class="final-cta__ctas">
-      <a href="{{ '/method/' | url }}" class="btn btn--accent">あっぷっぷ METHOD <span class="btn__arrow"></span></a>
-      <a href="{{ site.trialUrl }}" class="btn btn--ghost">事業・サービス <span class="btn__arrow"></span></a>
+      <a href="#method" data-nav="method" class="btn btn--accent">APUPU METHOD <span class="btn__arrow"></span></a>
+      <a href="#services" data-nav="services" class="btn btn--ghost">事業・サービス <span class="btn__arrow"></span></a>
     </div>
   </div>
 </section>
+`;

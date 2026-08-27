@@ -1,33 +1,29 @@
----
-layout: layouts/base.njk
-pageId: careers
-title: 採用情報
-description: 子どもたちの成長に伴走する講師・スタッフの採用情報です。
----
+window.PAGE_CAREERS = () => `
 <section class="page-hero">
   <div class="page-hero__deco"></div>
   <div class="container page-hero__inner">
+    <div class="breadcrumbs"><a href="#top" data-nav="top">HOME</a><span>／</span>採用情報</div>
     <div class="eyebrow">Careers ／ 採用情報</div>
     <h1 class="page-hero__title">
       子どもの未来を、<br>一緒につくる。
     </h1>
     <p class="page-hero__lead">
-      あっぷっぷは、教育に情熱を持つ仲間を、まっすぐ探しています。教育経験の有無は問いません。子どもの可能性を信じ、仲間と一緒に、新しい教育をつくりたい方をお待ちしています。
+      APUPUは、教育に情熱を持つ仲間を、まっすぐ探しています。教育経験の有無は問いません。子どもの可能性を信じ、仲間と一緒に、新しい教育をつくりたい方をお待ちしています。
     </p>
   </div>
 </section>
 
-<!-- あっぷっぷで働く意味 -->
+<!-- APUPUで働く意味 -->
 <section class="section container">
   <div class="two-col">
     <div>
-      <div class="eyebrow">Why あっぷっぷ</div>
-      <h2 class="h-headline">あっぷっぷで働くことは、<br>子どもたちの<br>未来をつくること。</h2>
+      <div class="eyebrow">Why APUPU</div>
+      <h2 class="h-headline">APUPUで働くことは、<br>子どもたちの<br>未来をつくること。</h2>
     </div>
     <div class="story__body" style="margin: 0;">
       <p>私たちが仕事として取り組んでいるのは、単なるサービス運営ではありません。<strong>子どもたち一人ひとりの、これからを支える営み</strong>です。</p>
       <p>数字と出会う最初の瞬間、できた喜び、失敗のあとの一歩、家族との関わり――そのすべてに、私たちの仕事は関わります。</p>
-      <p>華やかさや目立つ成果よりも、静かに続く「わかった」の連鎖を、丁寧に積み上げる仕事。それが、あっぷっぷの仕事です。</p>
+      <p>華やかさや目立つ成果よりも、静かに続く「わかった」の連鎖を、丁寧に積み上げる仕事。それが、APUPUの仕事です。</p>
     </div>
   </div>
 </section>
@@ -65,63 +61,23 @@ description: 子どもたちの成長に伴走する講師・スタッフの採�
     </p>
   </div>
   <div class="jobs-list__inner">
-
+    ${[
+      ['Teaching', 'そろばん講師（オンライン）', '正社員 / 業務委託'],
+      ['Teaching', 'オンライン講師（幼児向け）', '業務委託'],
+      ['Education', '教材制作・カリキュラム開発', '正社員'],
+      ['Support', 'カスタマーサポート', '正社員 / パート'],
+      ['Marketing', 'マーケティング／ブランディング', '正社員'],
+      ['Product', 'エンジニア（Web／モバイル）', '正社員 / 業務委託'],
+      ['Design', 'デザイナー（UI／UX／グラフィック）', '正社員 / 業務委託'],
+      ['Partner', '業務委託パートナー（各領域）', '業務委託'],
+    ].map(([cat, title, type]) => `
       <div class="job-row">
-        <div class="job-row__cat">Teaching</div>
-        <div class="job-row__title">そろばん講師（オンライン）</div>
-        <div class="job-row__meta">正社員 / 業務委託</div>
+        <div class="job-row__cat">${cat}</div>
+        <div class="job-row__title">${title}</div>
+        <div class="job-row__meta">${type}</div>
         <div class="job-row__arrow"></div>
       </div>
-
-      <div class="job-row">
-        <div class="job-row__cat">Teaching</div>
-        <div class="job-row__title">オンライン講師（幼児向け）</div>
-        <div class="job-row__meta">業務委託</div>
-        <div class="job-row__arrow"></div>
-      </div>
-
-      <div class="job-row">
-        <div class="job-row__cat">Education</div>
-        <div class="job-row__title">教材制作・カリキュラム開発</div>
-        <div class="job-row__meta">正社員</div>
-        <div class="job-row__arrow"></div>
-      </div>
-
-      <div class="job-row">
-        <div class="job-row__cat">Support</div>
-        <div class="job-row__title">カスタマーサポート</div>
-        <div class="job-row__meta">正社員 / パート</div>
-        <div class="job-row__arrow"></div>
-      </div>
-
-      <div class="job-row">
-        <div class="job-row__cat">Marketing</div>
-        <div class="job-row__title">マーケティング／ブランディング</div>
-        <div class="job-row__meta">正社員</div>
-        <div class="job-row__arrow"></div>
-      </div>
-
-      <div class="job-row">
-        <div class="job-row__cat">Product</div>
-        <div class="job-row__title">エンジニア（Web／モバイル）</div>
-        <div class="job-row__meta">正社員 / 業務委託</div>
-        <div class="job-row__arrow"></div>
-      </div>
-
-      <div class="job-row">
-        <div class="job-row__cat">Design</div>
-        <div class="job-row__title">デザイナー（UI／UX／グラフィック）</div>
-        <div class="job-row__meta">正社員 / 業務委託</div>
-        <div class="job-row__arrow"></div>
-      </div>
-
-      <div class="job-row">
-        <div class="job-row__cat">Partner</div>
-        <div class="job-row__title">業務委託パートナー（各領域）</div>
-        <div class="job-row__meta">業務委託</div>
-        <div class="job-row__arrow"></div>
-      </div>
-
+    `).join('')}
   </div>
 </section>
 
@@ -184,37 +140,19 @@ description: 子どもたちの成長に伴走する講師・スタッフの採�
     </p>
   </div>
   <div class="flow-steps">
-
+    ${[
+      ['01', 'エントリー', '応募フォームからご応募ください。カジュアル面談から始めることも可能です。'],
+      ['02', '書類選考', '経歴書・履歴書・志望動機を確認させていただきます。'],
+      ['03', '一次面談', '担当メンバーとの対話。人柄・考え方を伺います。'],
+      ['04', '二次・最終面談', '代表・関係メンバーとの対話。価値観の共有を大切にします。'],
+      ['05', 'ご入社', '内定後、入社日を調整。オンボーディングでお迎えします。'],
+    ].map(([n, t, d]) => `
       <div class="flow-steps__step">
-        <div class="flow-steps__step-num">Step 01</div>
-        <h5>エントリー</h5>
-        <p>応募フォームからご応募ください。カジュアル面談から始めることも可能です。</p>
+        <div class="flow-steps__step-num">Step ${n}</div>
+        <h5>${t}</h5>
+        <p>${d}</p>
       </div>
-
-      <div class="flow-steps__step">
-        <div class="flow-steps__step-num">Step 02</div>
-        <h5>書類選考</h5>
-        <p>経歴書・履歴書・志望動機を確認させていただきます。</p>
-      </div>
-
-      <div class="flow-steps__step">
-        <div class="flow-steps__step-num">Step 03</div>
-        <h5>一次面談</h5>
-        <p>担当メンバーとの対話。人柄・考え方を伺います。</p>
-      </div>
-
-      <div class="flow-steps__step">
-        <div class="flow-steps__step-num">Step 04</div>
-        <h5>二次・最終面談</h5>
-        <p>代表・関係メンバーとの対話。価値観の共有を大切にします。</p>
-      </div>
-
-      <div class="flow-steps__step">
-        <div class="flow-steps__step-num">Step 05</div>
-        <h5>ご入社</h5>
-        <p>内定後、入社日を調整。オンボーディングでお迎えします。</p>
-      </div>
-
+    `).join('')}
   </div>
 </section>
 
@@ -226,27 +164,17 @@ description: 子どもたちの成長に伴走する講師・スタッフの採�
       <h2 class="h-headline">よくあるご質問。</h2>
     </div>
     <div class="philosophy-qa">
-
+      ${[
+        ['そろばんの経験がなくても応募できますか？', 'はい、応募可能です。講師職以外の多くの職種は、そろばん経験を必須としていません。教育への姿勢を最も大切にしています。'],
+        ['副業・業務委託での参画も可能ですか？', '職種により可能です。業務委託パートナーとして関わっていただく道もご用意しています。'],
+        ['未経験の職種にも挑戦できますか？', 'はい。実務経験より、学び続けようとする姿勢を重視しています。'],
+        ['地方在住でも応募できますか？', 'オンライン中心の職種は、居住地を問いません。詳しくは職種ごとにご確認ください。'],
+      ].map(([q, a]) => `
         <div class="philosophy-qa__item">
-          <p class="philosophy-qa__q">そろばんの経験がなくても応募できますか？</p>
-          <p class="philosophy-qa__a">はい、応募可能です。講師職以外の多くの職種は、そろばん経験を必須としていません。教育への姿勢を最も大切にしています。</p>
+          <p class="philosophy-qa__q">${q}</p>
+          <p class="philosophy-qa__a">${a}</p>
         </div>
-
-        <div class="philosophy-qa__item">
-          <p class="philosophy-qa__q">副業・業務委託での参画も可能ですか？</p>
-          <p class="philosophy-qa__a">職種により可能です。業務委託パートナーとして関わっていただく道もご用意しています。</p>
-        </div>
-
-        <div class="philosophy-qa__item">
-          <p class="philosophy-qa__q">未経験の職種にも挑戦できますか？</p>
-          <p class="philosophy-qa__a">はい。実務経験より、学び続けようとする姿勢を重視しています。</p>
-        </div>
-
-        <div class="philosophy-qa__item">
-          <p class="philosophy-qa__q">地方在住でも応募できますか？</p>
-          <p class="philosophy-qa__a">オンライン中心の職種は、居住地を問いません。詳しくは職種ごとにご確認ください。</p>
-        </div>
-
+      `).join('')}
     </div>
   </div>
 </section>
@@ -256,8 +184,9 @@ description: 子どもたちの成長に伴走する講師・スタッフの採�
     <h2 class="final-cta__title">まずは、<br>お話しさせてください。</h2>
     <p class="final-cta__sub">応募でも、カジュアル面談でも、まずは気軽にご連絡ください。</p>
     <div class="final-cta__ctas">
-      <a href="{{ '/contact/' | url }}" class="btn btn--accent">応募・お問い合わせ <span class="btn__arrow"></span></a>
-      <a href="{{ '/members/' | url }}" class="btn btn--ghost">ボードメンバーを見る <span class="btn__arrow"></span></a>
+      <a href="#contact" data-nav="contact" class="btn btn--accent">応募・お問い合わせ <span class="btn__arrow"></span></a>
+      <a href="#members" data-nav="members" class="btn btn--ghost">ボードメンバーを見る <span class="btn__arrow"></span></a>
     </div>
   </div>
 </section>
+`;

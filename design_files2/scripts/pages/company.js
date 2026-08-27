@@ -1,13 +1,8 @@
----
-layout: layouts/base.njk
-pageId: company
-title: 会社概要
-description: 株式会社あっぷっぷの会社情報と沿革をご案内します。
----
+window.PAGE_COMPANY = () => `
 <section class="page-hero">
   <div class="page-hero__deco"></div>
   <div class="container page-hero__inner">
-    <div class="breadcrumbs"><a href="{{ '/' | url }}">HOME</a><span>／</span>会社概要</div>
+    <div class="breadcrumbs"><a href="#top" data-nav="top">HOME</a><span>／</span>会社概要</div>
     <div class="eyebrow">Company ／ 会社概要</div>
     <h1 class="page-hero__title">
       運営する、私たち。
@@ -62,8 +57,9 @@ description: 株式会社あっぷっぷの会社情報と沿革をご案内し�
   <div class="container">
     <h2 class="final-cta__title">お問い合わせは、<br>目的別にご用意しています。</h2>
     <div class="final-cta__ctas">
-      <a href="{{ '/contact/' | url }}" class="btn btn--accent">お問い合わせ <span class="btn__arrow"></span></a>
-      <a href="{{ '/services/' | url }}" class="btn btn--ghost">事業・サービス <span class="btn__arrow"></span></a>
+      <a href="#contact" data-nav="contact" class="btn btn--accent">お問い合わせ <span class="btn__arrow"></span></a>
+      <a href="#services" data-nav="services" class="btn btn--ghost">事業・サービス <span class="btn__arrow"></span></a>
     </div>
   </div>
 </section>
+`;

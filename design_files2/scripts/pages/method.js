@@ -1,18 +1,14 @@
----
-layout: layouts/base.njk
-pageId: method
-title: あっぷっぷ METHOD
-description: そろばんを通じて考える力、挑戦する力、続ける力を育てるあっぷっぷ独自のメソッドです。
----
+window.PAGE_METHOD = () => `
 <section class="page-hero">
   <div class="page-hero__deco"></div>
   <div class="container page-hero__inner">
-    <div class="eyebrow">あっぷっぷ METHOD ／ 独自の教育メソッド</div>
+    <div class="breadcrumbs"><a href="#top" data-nav="top">HOME</a><span>／</span>APUPU METHOD</div>
+    <div class="eyebrow">APUPU METHOD ／ 独自の教育メソッド</div>
     <h1 class="page-hero__title">
       子どもが育つ環境には、<br>理由があります。
     </h1>
     <p class="page-hero__lead">
-      あっぷっぷ METHODは、そろばんあっぷっぷが日々の教室で積み上げてきた教育観を、指導者・保護者・環境の3つの視点から体系化したものです。「なぜそう関わるのか」を、私たちの言葉でお伝えします。
+      APUPU METHODは、そろばんあっぷっぷが日々の教室で積み上げてきた教育観を、指導者・保護者・環境の3つの視点から体系化したものです。「なぜそう関わるのか」を、私たちの言葉でお伝えします。
     </p>
   </div>
 </section>
@@ -23,7 +19,7 @@ description: そろばんを通じて考える力、挑戦する力、続ける�
     <div class="eyebrow">Five Core Ideas</div>
     <h2 class="h-headline">好きになる ／ 待つ ／ 挑戦する ／<br>成長を認める ／ 続ける</h2>
     <p class="h-lead">
-      あっぷっぷ METHODの中心にあるのは、この5つの考え方です。技術指導のテクニックではなく、子どもとの関わり方そのものです。
+      APUPU METHODの中心にあるのは、この5つの考え方です。技術指導のテクニックではなく、子どもとの関わり方そのものです。
     </p>
   </div>
   <div class="grid-5" style="margin-top: 48px;">
@@ -62,7 +58,7 @@ description: そろばんを通じて考える力、挑戦する力、続ける�
       <div class="eyebrow">Method Diagram</div>
       <h2 class="h-headline">教材・指導・環境。<br>3つの層が連動する。</h2>
       <p class="h-lead">
-        あっぷっぷ METHODは、教材の質だけでも、指導者の腕だけでも成立しません。子どもを取り巻く「環境」を含めた、3つの層の連動によって、学びは深くなります。
+        APUPU METHODは、教材の質だけでも、指導者の腕だけでも成立しません。子どもを取り巻く「環境」を含めた、3つの層の連動によって、学びは深くなります。
       </p>
     </div>
     <div class="method-diagram">
@@ -147,7 +143,7 @@ description: そろばんを通じて考える力、挑戦する力、続ける�
   <div class="container">
     <div class="head-abacus__grid">
       <div>
-        <div class="eyebrow eyebrow--on-dark">Signature Idea ／ あっぷっぷ独自の教育要素</div>
+        <div class="eyebrow eyebrow--on-dark">Signature Idea ／ APUPU独自の教育要素</div>
         <h3>数字を見たとき、<br>そろばんの珠の配置として捉える。<br><span style="color: var(--accent);">「頭のそろばん」</span>という考え方。</h3>
         <p>私たちの生徒たちは、数字を単なる記号としてではなく、そろばんの珠の配置として、頭の中でイメージすることができるようになります。</p>
         <p>これは、単なる暗算の技術ではありません。数字を「触れるもの」として頭の中に持てる感覚――それは、抽象的な概念を身体感覚で理解する土台にもなります。</p>
@@ -161,58 +157,22 @@ description: そろばんを通じて考える力、挑戦する力、続ける�
           <line x1="20" y1="90" x2="280" y2="90" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
 
           <!-- 縦棒 5本 -->
-
-            <line x1="60" y1="30" x2="60" y2="210" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-
-            <line x1="105" y1="30" x2="105" y2="210" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-
-            <line x1="150" y1="30" x2="150" y2="210" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-
-            <line x1="195" y1="30" x2="195" y2="210" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-
-            <line x1="240" y1="30" x2="240" y2="210" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-
+          ${[60, 105, 150, 195, 240].map(x => `
+            <line x1="${x}" y1="30" x2="${x}" y2="210" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+          `).join('')}
 
           <!-- 5珠（上） -->
-
-            <circle cx="60" cy="60" r="10" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-
-            <circle cx="105" cy="60" r="10" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-
-            <circle cx="150" cy="60" r="10" fill="var(--accent)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-
-            <circle cx="195" cy="60" r="10" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-
-            <circle cx="240" cy="60" r="10" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-
+          ${[60, 105, 150, 195, 240].map((x, i) => `
+            <circle cx="${x}" cy="60" r="10" fill="${i === 2 ? 'var(--accent)' : 'rgba(255,255,255,0.3)'}" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+          `).join('')}
 
           <!-- 1珠（下）×4 -->
-
-            <circle cx="60" cy="115" r="9" fill="var(--accent)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="60" cy="140" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="60" cy="165" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="60" cy="190" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-
-            <circle cx="105" cy="115" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="105" cy="140" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="105" cy="165" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="105" cy="190" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-
-            <circle cx="150" cy="115" r="9" fill="var(--accent)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="150" cy="140" r="9" fill="var(--accent)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="150" cy="165" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="150" cy="190" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-
-            <circle cx="195" cy="115" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="195" cy="140" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="195" cy="165" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="195" cy="190" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-
-            <circle cx="240" cy="115" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="240" cy="140" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="240" cy="165" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-            <circle cx="240" cy="190" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
-
+          ${[60, 105, 150, 195, 240].map((x, i) => `
+            <circle cx="${x}" cy="115" r="9" fill="${i === 0 || i === 2 ? 'var(--accent)' : 'rgba(255,255,255,0.15)'}" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+            <circle cx="${x}" cy="140" r="9" fill="${i === 2 ? 'var(--accent)' : 'rgba(255,255,255,0.15)'}" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+            <circle cx="${x}" cy="165" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+            <circle cx="${x}" cy="190" r="9" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.5)" stroke-width="1"/>
+          `).join('')}
         </svg>
         <p style="margin-top: 24px; font-family: var(--font-latin); font-style: italic; font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 0.1em;">— 頭の中のそろばん、可視化イメージ</p>
       </div>
@@ -230,42 +190,31 @@ description: そろばんを通じて考える力、挑戦する力、続ける�
     </p>
   </div>
   <div class="flow-steps">
-
+    ${[
+      ['01', '振り返り', '前回の内容を短時間だけ復習。「思い出せた」で自信を得てから、今日に入る。'],
+      ['02', 'ゴール共有', '今日扱う内容と目標を、子ども自身の言葉で確認。ゴールを見える形にする。'],
+      ['03', 'まず自分で', '説明の前に、自分で解いてみる。うまくいかない体験が、次の理解を深める。'],
+      ['04', '対話で気付く', '一方的な講義ではなく、「なぜ？」を返す対話。答えではなく道筋を渡す。'],
+      ['05', '手を動かす', '短時間・多回数のドリル。ミスは「発見」として扱い、粘りを称える。'],
+      ['06', '一言で振り返る', '今日わかったことを、一文で口に出す。言葉にすることで、確かに残る。'],
+    ].map(([n, t, d]) => `
       <div class="flow-steps__step">
-        <div class="flow-steps__step-num">Step 01</div>
-        <h5>振り返り</h5>
-        <p>前回の内容を短時間だけ復習。「思い出せた」で自信を得てから、今日に入る。</p>
+        <div class="flow-steps__step-num">Step ${n}</div>
+        <h5>${t}</h5>
+        <p>${d}</p>
       </div>
-
-      <div class="flow-steps__step">
-        <div class="flow-steps__step-num">Step 02</div>
-        <h5>ゴール共有</h5>
-        <p>今日扱う内容と目標を、子ども自身の言葉で確認。ゴールを見える形にする。</p>
-      </div>
-
-      <div class="flow-steps__step">
-        <div class="flow-steps__step-num">Step 03</div>
-        <h5>まず自分で</h5>
-        <p>説明の前に、自分で解いてみる。うまくいかない体験が、次の理解を深める。</p>
-      </div>
-
-      <div class="flow-steps__step">
-        <div class="flow-steps__step-num">Step 04</div>
-        <h5>対話で気付く</h5>
-        <p>一方的な講義ではなく、「なぜ？」を返す対話。答えではなく道筋を渡す。</p>
-      </div>
-
-      <div class="flow-steps__step">
-        <div class="flow-steps__step-num">Step 05</div>
-        <h5>手を動かす</h5>
-        <p>短時間・多回数のドリル。ミスは「発見」として扱い、粘りを称える。</p>
-      </div>
-
-      <div class="flow-steps__step">
-        <div class="flow-steps__step-num">Step 06</div>
-        <h5>一言で振り返る</h5>
-        <p>今日わかったことを、一文で口に出す。言葉にすることで、確かに残る。</p>
-      </div>
-
+    `).join('')}
   </div>
 </section>
+
+<section class="final-cta">
+  <div class="container">
+    <h2 class="final-cta__title">METHODは、<br>体験してこそ実感できます。</h2>
+    <p class="final-cta__sub">授業の型、講師の関わり方は、体験レッスンで見ていただくのが一番です。</p>
+    <div class="final-cta__ctas">
+      <a href="#" class="btn btn--accent">体験・入会はこちら <span class="btn__arrow"></span></a>
+      <a href="#services" data-nav="services" class="btn btn--ghost">サービスを見る <span class="btn__arrow"></span></a>
+    </div>
+  </div>
+</section>
+`;

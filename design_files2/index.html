@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社あっぷっぷ｜数字を味方に。未来を自由に。</title>
+<meta name="description" content="株式会社あっぷっぷは、オンラインそろばんレッスン「そろばんあっぷっぷ」を提供する教育会社です。数字を通じて、子どもたちの思考力と自己肯定感を育てます。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body data-tone="A">
+
+<!-- A/B トーン切替（プレビュー用） -->
+<div class="tone-switch" id="toneSwitch" aria-label="デザイントーン切替">
+  <span class="tone-switch__label">Tone</span>
+  <button data-tone-set="A" class="is-active">A｜信頼・上質</button>
+  <button data-tone-set="B">B｜温かみ・親しみ</button>
+</div>
+
+<!-- ヘッダー -->
+<header class="site-header" id="siteHeader">
+  <a href="#top" class="site-header__brand" data-nav="top" aria-label="株式会社あっぷっぷ トップページ">
+    <img src="assets/logo.png" alt="株式会社あっぷっぷ" class="site-header__logo">
+  </a>
+  <nav class="site-nav" aria-label="グローバルナビゲーション">
+    <a href="#services" data-nav="services">事業・サービス</a>
+    <a href="#message" data-nav="message">代表メッセージ</a>
+    <a href="#members" data-nav="members">ボードメンバー</a>
+    <a href="#news" data-nav="news">お知らせ</a>
+    <a href="#company" data-nav="company">会社概要</a>
+    <a href="#contact" data-nav="contact">お問い合わせ</a>
+  </nav>
+  <button class="site-header__menu" id="menuToggle" aria-label="メニュー" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- モバイルメニュー -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu__inner">
+    <nav aria-label="モバイルナビゲーション">
+      <a href="#top" data-nav="top">トップ</a>
+      <a href="#services" data-nav="services">事業・サービス</a>
+      <a href="#message" data-nav="message">代表メッセージ</a>
+      <a href="#members" data-nav="members">ボードメンバー</a>
+      <a href="#news" data-nav="news">お知らせ</a>
+      <a href="#company" data-nav="company">会社概要</a>
+      <a href="#contact" data-nav="contact">お問い合わせ</a>
+      <a href="#privacy" data-nav="privacy" class="is-sub">プライバシーポリシー</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ページ本体 -->
+<main id="pageContainer"></main>
+
+<!-- フッター -->
+<footer class="site-footer" id="siteFooter">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <img src="assets/logo.png" alt="株式会社あっぷっぷ" class="site-footer__logo">
+      <p class="site-footer__tagline">数字を味方に。<br>未来を自由に。</p>
+      <p class="site-footer__caption">株式会社あっぷっぷ ／ オンライン教育</p>
+      <div class="site-footer__sns" aria-label="SNS">
+        <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="site-footer__cols">
+      <div>
+        <h4>事業</h4>
+        <a href="#services" data-nav="services">事業・サービス</a>
+        <a href="#message" data-nav="message">代表メッセージ</a>
+        <a href="#members" data-nav="members">ボードメンバー</a>
+      </div>
+      <div>
+        <h4>会社情報</h4>
+        <a href="#company" data-nav="company">会社概要</a>
+        <a href="#news" data-nav="news">お知らせ</a>
+        <a href="#contact" data-nav="contact">お問い合わせ</a>
+        <a href="#privacy" data-nav="privacy">プライバシーポリシー</a>
+      </div>
+      <div>
+        <h4>サービス情報</h4>
+        <a href="#" target="_blank" rel="noopener" class="site-footer__lp-link">サービスLPへ ↗</a>
+        <p class="site-footer__mini">サービス内容・料金・レッスンの詳細は<br>「そろばんあっぷっぷ」サービスLPをご覧ください。</p>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__base">
+    <span>© 2026 株式会社あっぷっぷ All Rights Reserved.</span>
+    <span class="site-footer__base-r">数字を味方に。未来を自由に。</span>
+  </div>
+</footer>
+
+<script src="scripts/all-pages.js"></script>
+<script src="scripts/app.js"></script>
+</body>
+</html>

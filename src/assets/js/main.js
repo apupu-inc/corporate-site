@@ -1,58 +1,35 @@
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
-if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = mobileMenu.classList.toggle("is-open");
-    mobileMenu.setAttribute("aria-hidden", String(!isOpen));
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && mobileMenu.classList.contains("is-open")) {
-      mobileMenu.classList.remove("is-open");
-      mobileMenu.setAttribute("aria-hidden", "true");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.focus();
-    }
-  });
+function closeMenu() {
+  mobileMenu?.classList.remove("is-open");
+  mobileMenu?.setAttribute("aria-hidden", "true");
+  menuToggle?.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("menu-open");
 }
 
-const navDropdownButtons = document.querySelectorAll("[data-nav-dropdown]");
+menuToggle?.addEventListener("click", () => {
+  const isOpen = mobileMenu.classList.toggle("is-open");
+  mobileMenu.setAttribute("aria-hidden", String(!isOpen));
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  document.body.classList.toggle("menu-open", isOpen);
+});
 
-function closeNavDropdowns(exceptButton = null) {
-  navDropdownButtons.forEach((button) => {
-    if (button !== exceptButton) {
-      button.setAttribute("aria-expanded", "false");
-      button.closest(".site-nav__group")?.classList.remove("is-open");
-    }
-  });
+mobileMenu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
+
+const filters = document.querySelectorAll("[data-filter]");
+const newsRows = document.querySelectorAll(".news-row[data-category]");
+filters.forEach((button) => button.addEventListener("click", () => {
+  const category = button.dataset.filter;
+  filters.forEach((item) => item.classList.toggle("is-active", item === button));
+  newsRows.forEach((row) => { row.hidden = category !== "すべて" && row.dataset.category !== category; });
+}));
+
+const consent = document.querySelector("[data-contact-consent]");
+const submit = document.querySelector("[data-contact-submit]");
+if (consent && submit) {
+  const syncSubmit = () => { submit.disabled = !consent.checked; };
+  consent.addEventListener("change", syncSubmit);
+  syncSubmit();
 }
-
-navDropdownButtons.forEach((button) => {
-  button.addEventListener("click", (event) => {
-    event.stopPropagation();
-    const group = button.closest(".site-nav__group");
-    const willOpen = !group?.classList.contains("is-open");
-    closeNavDropdowns(button);
-    group?.classList.toggle("is-open", willOpen);
-    button.setAttribute("aria-expanded", String(willOpen));
-  });
-});
-
-document.addEventListener("click", () => closeNavDropdowns());
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    const openButton = document.querySelector("[data-nav-dropdown][aria-expanded='true']");
-    closeNavDropdowns();
-    openButton?.focus();
-  }
-});
-
-document.querySelectorAll("[data-contact-type]").forEach((card) => {
-  card.addEventListener("click", () => {
-    document.querySelectorAll("[data-contact-type]").forEach((item) => item.classList.toggle("is-active", item === card));
-    const select = document.querySelector("#contact-category");
-    if (select) select.value = card.dataset.contactType;
-  });
-});

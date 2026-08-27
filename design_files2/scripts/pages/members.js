@@ -1,13 +1,15 @@
----
-layout: layouts/base.njk
-pageId: members
-title: ボードメンバー
-description: 株式会社あっぷっぷのボードメンバーをご紹介します。
----
+window.PAGE_MEMBERS = () => {
+  const members = [
+    {role: 'Founder / CEO', name: '藤村　大生', field: '経営、教育理念、事業開発', quote: '数字を通じて、子どもたちの未来の選択肢を広げたい。'},
+    {role: 'COO', name: '惠上　裕介', field: '事業運営、教室オペレーション', quote: '[大切にしている言葉を入力してください]'},
+    {role: 'CTO', name: '石野　隼伍', field: 'プロダクト開発、テクノロジー', quote: '[大切にしている言葉を入力してください]'},
+  ];
+
+  return `
 <section class="page-hero">
   <div class="page-hero__deco"></div>
   <div class="container page-hero__inner">
-    <div class="breadcrumbs"><a href="{{ '/' | url }}">HOME</a><span>／</span>ボードメンバー</div>
+    <div class="breadcrumbs"><a href="#top" data-nav="top">HOME</a><span>／</span>ボードメンバー</div>
     <div class="eyebrow">Board Members ／ ボードメンバー</div>
     <h1 class="page-hero__title">
       未来をつくる、<br>仲間たち。
@@ -42,43 +44,19 @@ description: 株式会社あっぷっぷのボードメンバーをご紹介し�
       <h2 class="h-headline">Board Members</h2>
     </div>
     <div class="members-grid">
-
+      ${members.map((m, i) => `
         <div class="member-card">
           <div class="member-card__photo ph-img">
-            <div class="ph-img__label ph-img__label--photo">[Founder / CEO のポートレートを入力]</div>
+            <div class="ph-img__label ph-img__label--photo">[${m.role} のポートレートを入力]</div>
           </div>
           <div class="member-card__body">
-            <div class="member-card__role">Founder / CEO</div>
-            <h4 class="member-card__name">藤村　大生</h4>
-            <p class="member-card__title-jp">担当：経営、教育理念、事業開発</p>
-            <p class="member-card__quote">数字を通じて、子どもたちの未来の選択肢を広げたい。</p>
+            <div class="member-card__role">${m.role}</div>
+            <h4 class="member-card__name">${m.name}</h4>
+            <p class="member-card__title-jp">担当：${m.field}</p>
+            <p class="member-card__quote">${m.quote}</p>
           </div>
         </div>
-
-        <div class="member-card">
-          <div class="member-card__photo ph-img">
-            <div class="ph-img__label ph-img__label--photo">[COO のポートレートを入力]</div>
-          </div>
-          <div class="member-card__body">
-            <div class="member-card__role">COO</div>
-            <h4 class="member-card__name">惠上　裕介</h4>
-            <p class="member-card__title-jp">担当：事業運営、教室オペレーション</p>
-            <p class="member-card__quote">[大切にしている言葉を入力してください]</p>
-          </div>
-        </div>
-
-        <div class="member-card">
-          <div class="member-card__photo ph-img">
-            <div class="ph-img__label ph-img__label--photo">[CTO のポートレートを入力]</div>
-          </div>
-          <div class="member-card__body">
-            <div class="member-card__role">CTO</div>
-            <h4 class="member-card__name">石野　隼伍</h4>
-            <p class="member-card__title-jp">担当：プロダクト開発、テクノロジー</p>
-            <p class="member-card__quote">[大切にしている言葉を入力してください]</p>
-          </div>
-        </div>
-
+      `).join('')}
     </div>
   </div>
 </section>
@@ -158,51 +136,23 @@ description: 株式会社あっぷっぷのボードメンバーをご紹介し�
       </p>
     </div>
     <div class="board-talk__list">
-
+      ${[
+        ['Vol.01', 'なぜ株式会社あっぷっぷを始めたのか。', '[対談参加者・公開日を入力]'],
+        ['Vol.02', 'そろばん教育の、これから。', '[対談参加者・公開日を入力]'],
+        ['Vol.03', 'AI時代に必要な教育とは。', '[対談参加者・公開日を入力]'],
+        ['Vol.04', 'オンライン教育の可能性を考える。', '[対談参加者・公開日を入力]'],
+      ].map(([vol, title, meta]) => `
         <article class="board-talk__item">
           <div class="board-talk__thumb ph-img">
             <div class="ph-img__label ph-img__label--photo">[対談ビジュアルを入力]</div>
           </div>
           <div class="board-talk__body">
-            <div class="board-talk__tag">Vol.01</div>
-            <h3 class="board-talk__title">なぜ株式会社あっぷっぷを始めたのか。</h3>
-            <div class="board-talk__meta">[対談参加者・公開日を入力]</div>
+            <div class="board-talk__tag">${vol}</div>
+            <h3 class="board-talk__title">${title}</h3>
+            <div class="board-talk__meta">${meta}</div>
           </div>
         </article>
-
-        <article class="board-talk__item">
-          <div class="board-talk__thumb ph-img">
-            <div class="ph-img__label ph-img__label--photo">[対談ビジュアルを入力]</div>
-          </div>
-          <div class="board-talk__body">
-            <div class="board-talk__tag">Vol.02</div>
-            <h3 class="board-talk__title">そろばん教育の、これから。</h3>
-            <div class="board-talk__meta">[対談参加者・公開日を入力]</div>
-          </div>
-        </article>
-
-        <article class="board-talk__item">
-          <div class="board-talk__thumb ph-img">
-            <div class="ph-img__label ph-img__label--photo">[対談ビジュアルを入力]</div>
-          </div>
-          <div class="board-talk__body">
-            <div class="board-talk__tag">Vol.03</div>
-            <h3 class="board-talk__title">AI時代に必要な教育とは。</h3>
-            <div class="board-talk__meta">[対談参加者・公開日を入力]</div>
-          </div>
-        </article>
-
-        <article class="board-talk__item">
-          <div class="board-talk__thumb ph-img">
-            <div class="ph-img__label ph-img__label--photo">[対談ビジュアルを入力]</div>
-          </div>
-          <div class="board-talk__body">
-            <div class="board-talk__tag">Vol.04</div>
-            <h3 class="board-talk__title">オンライン教育の可能性を考える。</h3>
-            <div class="board-talk__meta">[対談参加者・公開日を入力]</div>
-          </div>
-        </article>
-
+      `).join('')}
     </div>
   </div>
 </section>
@@ -216,8 +166,10 @@ description: 株式会社あっぷっぷのボードメンバーをご紹介し�
       サービス、取材、パートナーシップ、その他のご相談まで。<br>目的に応じて、専用のお問い合わせ窓口をご用意しています。
     </p>
     <div class="final-cta__ctas">
-      <a href="{{ '/contact/' | url }}" class="btn btn--accent">お問い合わせ <span class="btn__arrow"></span></a>
-      <a href="{{ '/services/' | url }}" class="btn btn--ghost">事業・サービス <span class="btn__arrow"></span></a>
+      <a href="#contact" data-nav="contact" class="btn btn--accent">お問い合わせ <span class="btn__arrow"></span></a>
+      <a href="#services" data-nav="services" class="btn btn--ghost">事業・サービス <span class="btn__arrow"></span></a>
     </div>
   </div>
 </section>
+`;
+};

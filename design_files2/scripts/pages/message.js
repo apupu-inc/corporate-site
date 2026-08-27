@@ -1,13 +1,8 @@
----
-layout: layouts/base.njk
-pageId: message
-title: 代表メッセージ
-description: 株式会社あっぷっぷ Founder / CEO 藤村大生からのメッセージです。
----
+window.PAGE_MESSAGE = () => `
 <section class="page-hero">
   <div class="page-hero__deco"></div>
   <div class="container page-hero__inner">
-    <div class="breadcrumbs"><a href="{{ '/' | url }}">HOME</a><span>／</span>代表メッセージ</div>
+    <div class="breadcrumbs"><a href="#top" data-nav="top">HOME</a><span>／</span>代表メッセージ</div>
     <div class="eyebrow">Message from CEO ／ 代表メッセージ</div>
     <h1 class="page-hero__title">
       数字は、<br>私にとって遊びでした。
@@ -80,8 +75,9 @@ description: 株式会社あっぷっぷ Founder / CEO 藤村大生からのメ�
     <h2 class="final-cta__title">代表と、話してみませんか。</h2>
     <p class="final-cta__sub">取材・登壇・対談のご依頼、その他のご相談まで――<br>それぞれの入口を、ご用意しています。</p>
     <div class="final-cta__ctas">
-      <a href="{{ '/contact/' | url }}" class="btn btn--accent">お問い合わせ <span class="btn__arrow"></span></a>
-      <a href="{{ '/members/' | url }}" class="btn btn--ghost">ボードメンバー <span class="btn__arrow"></span></a>
+      <a href="#contact" data-nav="contact" class="btn btn--accent">お問い合わせ <span class="btn__arrow"></span></a>
+      <a href="#members" data-nav="members" class="btn btn--ghost">ボードメンバー <span class="btn__arrow"></span></a>
     </div>
   </div>
 </section>
+`;
