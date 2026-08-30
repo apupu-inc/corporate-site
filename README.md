@@ -31,7 +31,7 @@ src/
 └── */index.njk                 各下層ページ
 ```
 
-サイトは `/services/`、`/message/`、`/members/`、`/news/`、`/company/`、`/contact/`、`/privacy/` の個別 URL で構成しています。共通部品、ページ別メタ情報、Eleventy の `url` フィルターによる GitHub Pages の path prefix 対応を維持してください。
+サイトは `/services/`、`/message/`、`/members/`、`/news/`、`/company/`、`/contact/` の個別 URL で構成しています。共通部品、ページ別メタ情報、Eleventy の `url` フィルターによる GitHub Pages の path prefix 対応を維持してください。
 
 ## Add a news article
 
