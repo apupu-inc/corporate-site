@@ -2509,6 +2509,11 @@ body[data-tone="B"] .site-header {
   color: var(--bg);
   border-color: var(--ink);
 }
+.site-footer__sns img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
 .site-footer__line {
   width: auto !important;
   padding: 0 18px;
