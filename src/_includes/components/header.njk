@@ -8,7 +8,7 @@
     <a href="{{ '/members/' | url }}"{% if pageId == 'members' %} class="is-current" aria-current="page"{% endif %}>ボードメンバー</a>
     <a href="{{ '/news/' | url }}"{% if pageId == 'news' or pageId == 'news-detail' %} class="is-current" aria-current="page"{% endif %}>お知らせ</a>
     <a href="{{ '/company/' | url }}"{% if pageId == 'company' %} class="is-current" aria-current="page"{% endif %}>会社概要</a>
-    <a href="{{ '/contact/' | url }}"{% if pageId == 'contact' %} class="is-current" aria-current="page"{% endif %}>お問い合わせ</a>
+    <a href="{{ site.contactUrl }}">お問い合わせ</a>
   </nav>
   <button class="site-header__menu" id="menuToggle" type="button" aria-label="メニュー" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
@@ -21,7 +21,7 @@
       <a href="{{ '/members/' | url }}">ボードメンバー</a>
       <a href="{{ '/news/' | url }}">お知らせ</a>
       <a href="{{ '/company/' | url }}">会社概要</a>
-      <a href="{{ '/contact/' | url }}">お問い合わせ</a>
+      <a href="{{ site.contactUrl }}">お問い合わせ</a>
     </nav>
   </div>
 </div>
