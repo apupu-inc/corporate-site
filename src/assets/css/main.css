@@ -509,6 +509,14 @@ body[data-tone="B"] .site-header {
 .ph-img__wide { aspect-ratio: 16 / 9; }
 .ph-img__hero { aspect-ratio: 4 / 5; }
 
+.portrait-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 /* Numeric beads decoration */
 .beads-line {
   display: inline-flex;
@@ -1215,6 +1223,7 @@ body[data-tone="B"] .site-header {
   aspect-ratio: 3 / 4;
   background: var(--bg-sub);
   border-radius: var(--radius);
+  overflow: hidden;
 }
 .message-teaser__quote {
   font-family: var(--font-serif);
@@ -1700,6 +1709,7 @@ body[data-tone="B"] .site-header {
   aspect-ratio: 3 / 4;
   background: var(--bg-sub);
   border-radius: var(--radius);
+  overflow: hidden;
   position: sticky;
   top: 100px;
 }
@@ -1778,13 +1788,7 @@ body[data-tone="B"] .site-header {
   background: var(--bg);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: all 0.3s ease;
-  cursor: pointer;
   border: 1px solid var(--line-soft);
-}
-.member-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
 }
 .member-card__photo {
   aspect-ratio: 4 / 5;
@@ -1844,6 +1848,7 @@ body[data-tone="B"] .site-header {
   aspect-ratio: 4 / 5;
   background: var(--bg);
   border-radius: var(--radius);
+  overflow: hidden;
 }
 .member-profile__body dl {
   display: grid;
@@ -1873,61 +1878,6 @@ body[data-tone="B"] .site-header {
   .member-profile__body dl { grid-template-columns: 100px 1fr; }
 }
 
-.board-talk {
-  padding: clamp(60px, 8vw, 100px) 0;
-}
-.board-talk__list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-top: 48px;
-}
-.board-talk__item {
-  background: var(--bg);
-  border-radius: var(--radius);
-  border: 1px solid var(--line-soft);
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.board-talk__item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
-}
-.board-talk__thumb {
-  aspect-ratio: 16 / 9;
-  background: var(--bg-sub);
-}
-.board-talk__body {
-  padding: 24px 28px;
-}
-.board-talk__tag {
-  font-family: var(--font-latin);
-  font-style: italic;
-  font-size: 12px;
-  color: var(--accent-2);
-  letter-spacing: 0.08em;
-  margin-bottom: 12px;
-}
-.board-talk__title {
-  font-family: var(--font-serif);
-  font-size: 17px;
-  font-weight: 500;
-  margin: 0 0 12px;
-  color: var(--ink);
-  line-height: 1.6;
-  letter-spacing: 0.04em;
-}
-.board-talk__meta {
-  font-size: 12px;
-  color: var(--ink-mute);
-  font-family: var(--font-mono);
-  letter-spacing: 0.06em;
-}
-@media (max-width: 700px) {
-  .board-talk__list { grid-template-columns: 1fr; }
-}
-
 .team-values {
   padding: clamp(60px, 8vw, 100px) 0;
   background: var(--ink);
@@ -1941,22 +1891,23 @@ body[data-tone="B"] .site-header {
 }
 .team-values__list li {
   list-style: none;
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  column-gap: 12px;
   padding: 24px 0;
   border-top: 1px solid rgba(255,255,255,0.1);
   font-family: var(--font-serif);
   font-size: 17px;
   font-weight: 500;
+  line-height: 1.85;
   color: var(--bg);
   letter-spacing: 0.06em;
-  position: relative;
-  padding-left: 32px;
 }
 .team-values__list li::before {
   content: "";
-  position: absolute;
-  left: 0; top: 32px;
   width: 20px;
   height: 1px;
+  margin-top: calc(0.925em - 0.5px);
   background: var(--accent);
 }
 @media (max-width: 900px) {
