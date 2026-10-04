@@ -1,6 +1,10 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
+  eleventyConfig.addFilter("absoluteSiteUrl", (path, siteUrl) => {
+    return new URL(path.replace(/^\/+/, ""), siteUrl).href;
+  });
+
   eleventyConfig.addFilter("jaDate", (value) => {
     const date = value instanceof Date ? value : new Date(value);
     return new Intl.DateTimeFormat("ja-JP", {

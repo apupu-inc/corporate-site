@@ -1,5 +1,8 @@
 {
   "name": "株式会社あっぷっぷ",
+  "url": "https://apupu-inc.github.io/corporate-site/",
+  "ogImage": "/assets/images/ogp.png",
+  "ogImageAlt": "あっぷっぷのロゴと、そろばんを楽しむ親子",
   "defaultTitle": "株式会社あっぷっぷ｜数字を味方に。未来を自由に。",
   "description": "株式会社あっぷっぷは、オンラインそろばんレッスン「そろばんあっぷっぷ」を提供する教育会社です。",
   "language": "ja",
