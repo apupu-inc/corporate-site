@@ -678,7 +678,7 @@ body[data-tone="B"] .site-header {
 
 @media (max-width: 900px) {
   .hero__inner { grid-template-columns: 1fr; }
-  .hero__visual { max-width: 520px; margin: 0 auto; }
+  .hero__visual { width: 100%; max-width: 520px; margin: 0 auto; }
   .hero__badges { display: none; }
 }
 
