@@ -1,0 +1,4 @@
+interface:
+  display_name: "あっぷっぷ お知らせ記事"
+  short_description: "あっぷっぷのコーポレートサイトへお知らせ記事を追加・更新"
+  default_prompt: "Use $apupu-news-article to add or update an お知らせ article from my supplied information."
