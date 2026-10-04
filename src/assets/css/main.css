@@ -560,7 +560,10 @@ body[data-tone="B"] .site-header {
   margin: 0 0 32px;
   color: var(--ink);
 }
-.hero__title .l2 { display: block; }
+.hero__title-line {
+  display: block;
+  white-space: nowrap;
+}
 .hero__title-mark {
   position: relative;
   display: inline-block;
