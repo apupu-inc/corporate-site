@@ -25,11 +25,3 @@ filters.forEach((button) => button.addEventListener("click", () => {
   filters.forEach((item) => item.classList.toggle("is-active", item === button));
   newsRows.forEach((row) => { row.hidden = category !== "すべて" && row.dataset.category !== category; });
 }));
-
-const consent = document.querySelector("[data-contact-consent]");
-const submit = document.querySelector("[data-contact-submit]");
-if (consent && submit) {
-  const syncSubmit = () => { submit.disabled = !consent.checked; };
-  consent.addEventListener("change", syncSubmit);
-  syncSubmit();
-}
