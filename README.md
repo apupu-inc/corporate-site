@@ -140,7 +140,7 @@ src/
 
 ## GitHub Pages
 
-`main` ブランチへの push で `.github/workflows/pages.yml` が `npm ci` と Eleventy のビルドを実行し、`_site/` をデプロイします。Actions が取得した `base_path` は `--pathprefix` として Eleventy に渡されます。
+`main` ブランチへの push で `.github/workflows/pages.yml` が `npm ci` と `npm run build -- --pathprefix=/` を実行し、`_site/` をデプロイします。独自ドメイン `https://apupu.family/` のルートで公開するため、パスの接頭辞は `/` に固定しています。
 
 ## Before production release
 
